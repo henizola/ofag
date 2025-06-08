@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Audit Reports - OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainblue: '#2c4067',
+                    }
+                }
+            }
+        }
+    </script>
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white border-b">
+        <div class="relative" style="height: 160px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="relative flex items-center justify-center h-full">
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                </div>
+                <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                    <span class="text-[#2c4067] font-medium text-base">En</span>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Home</a></li>
+                    <li><a href="about.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">About us</a></li>
+                    <li><a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Services</a></li>
+                    <li><a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Media Center</a></li>
+                    <li><a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Announcements</a></li>
+                    <li><a href="legislations.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Publications</a></li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">Audit Reports</a></li>
+                    <li><a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Portal</a></li>
+                    <li><a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h1 class="text-3xl font-bold text-mainblue mb-8">Annual Audit Reports</h1>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Left Column: File Browser -->
+                <div class="w-full md:w-2/3">
+                    <div id="file-browser" class="bg-white p-6 rounded-lg shadow-md">
+                        <!-- Header -->
+                        <div class="flex justify-between items-center mb-4">
+                            <div id="breadcrumbs" class="text-sm text-gray-500"></div>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-list text-gray-500 cursor-pointer"></i>
+                                <i class="fas fa-th-large text-mainblue cursor-pointer"></i>
+                            </div>
+                        </div>
+
+                        <!-- File/Folder List -->
+                        <div id="file-list" class="space-y-2">
+                            <!-- JS will render content here -->
+                        </div>
+
+                        <!-- Footer / Pagination -->
+                        <div id="pagination-controls" class="mt-6 flex justify-between items-center">
+                            <!-- JS will render pagination here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sidebar -->
+                <div class="w-full md:w-1/3">
+                    <div class="space-y-6">
+                        <!-- Search -->
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="relative">
+                                <input type="text" placeholder="Search" class="w-full p-2 pr-10 rounded border border-gray-300">
+                                <i class="fas fa-search absolute top-1/2 right-3 -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <!-- Date Range -->
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                             <input type="text" placeholder="Jan 6, 2024 - Jan 13, 2024" class="w-full p-2 rounded border border-gray-300">
+                        </div>
+                        <!-- Sort By -->
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <select class="w-full p-2 rounded border border-gray-300">
+                                <option>Sort by</option>
+                            </select>
+                        </div>
+                        <!-- Categories -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-mainblue mb-4">Categories</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="hover:text-mainblue cursor-pointer">Financial Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">Compliance Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">Performance Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">Environmental Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">IT Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">Investigation Audit Reports</li>
+                                <li class="hover:text-mainblue cursor-pointer">Speech to Parliament</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Most Downloaded Section -->
+    <section class="bg-mainblue py-20 mt-16 text-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Most Downloaded</h2>
+            <div class="space-y-6">
+                <!-- Report 1 -->
+                <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <div>
+                            <h3 class="font-bold text-xl">Federal Judicial Admin council 2014 E.C Financial Audit Report</h3>
+                            <p class="text-sm opacity-80">Category: Financial Audit Report</p>
+                            <p class="text-sm opacity-80">Date: November 23,2023</p>
+                        </div>
+                    </div>
+                    <a href="audit-reports.html" class="bg-white text-mainblue font-bold py-2 px-6 rounded-lg hover:bg-gray-200 transition duration-300">Download PDF</a>
+                </div>
+                <!-- Report 2 -->
+                <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <div>
+                            <h3 class="font-bold text-xl">Industrial Parks Development Corporation 2014 E.C Performance Audit Report</h3>
+                            <p class="text-sm opacity-80">Category: Performance Audit Report</p>
+                            <p class="text-sm opacity-80">Date: June 29,2023</p>
+                        </div>
+                    </div>
+                    <a href="audit-reports.html" class="bg-white text-mainblue font-bold py-2 px-6 rounded-lg hover:bg-gray-200 transition duration-300">Download PDF</a>
+                </div>
+                <!-- Report 3 -->
+                <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <div>
+                            <h3 class="font-bold text-xl">Addis Ababa University Of Science And Technology 2014 E C Performance Audit Report</h3>
+                            <p class="text-sm opacity-80">Category: Performance Audit Report</p>
+                            <p class="text-sm opacity-80">Date: June 29,2023</p>
+                        </div>
+                    </div>
+                    <a href="audit-reports.html" class="bg-white text-mainblue font-bold py-2 px-6 rounded-lg hover:bg-gray-200 transition duration-300">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contact CTA Section -->
+     <section class="bg-white pt-12">
+        <div class="container mx-auto px-4">
+          <div class="bg-[#F4F6F7] rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 mb-[-60px] shadow-lg max-w-7xl mx-auto relative z-10">
+            <div class="mb-4 md:mb-0">
+              <div class="text-[24px] font-medium text-mainblue mb-1">Need more information?</div>
+              <div class="text-mainblue text-lg">Write to us and we will get back to you.</div>
+            </div>
+            <a href="contact.html" class="bg-mainblue text-white font-medium px-8 py-3 rounded-md text-lg hover:bg-blue-900 transition">Contact Us</a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Footer Section -->
+      <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row md:justify-between gap-12">
+            <!-- Left: Logo and Info -->
+            <div class="flex-1 min-w-[220px]">
+              <div class="flex items-center mb-4">
+                <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+              </div>
+              <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+              <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
+              <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
+              <div class="flex space-x-3 mt-2">
+                <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+              
+                <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+              </div>
+            </div>
+            <!-- Middle: Navigation -->
+            <div class="flex-1 min-w-[180px]">
+              <div class="footer-link-header text-white font-bold mb-3">Pages</div>
+              <ul class="text-white space-y-1 text-sm">
+                <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
+                <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
+                <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
+                <li><a href="legislations.html" class="footer-link hover:underline">Publications</a></li>
+                <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
+                <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
+                <li><a href="portal.html" class="footer-link hover:underline">OFAG Portal</a></li>
+                <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
+              </ul>
+            </div>
+            <!-- Middle: Explore -->
+            <div class="flex-1 min-w-[180px]">
+              <div class="footer-link-header text-white font-bold mb-3">Explore</div>
+              <ul class="text-white space-y-1 text-sm">
+                <li><a href="services.html" class="footer-link hover:underline">Our Services</a></li>
+                <li><a href="news.html" class="footer-link hover:underline">News & Stories</a></li>
+                <li><a href="#" class="footer-link hover:underline">Newsletters</a></li>
+                <li><a href="legislations.html" class="footer-link hover:underline">Manuals & Guidelines</a></li>
+                <li><a href="faq.html" class="footer-link hover:underline">FAQ</a></li>
+              </ul>
+            </div>
+            <!-- Right: Company -->
+            <div class="flex-1 min-w-[180px]">
+              <div class="footer-link-header text-white font-bold mb-3">Company</div>
+              <ul class="text-white space-y-1 text-sm">
+                <li><a href="#" class="footer-link hover:underline">Events</a></li>
+                <li><a href="vacancy.html" class="footer-link hover:underline">Vacancies & Bids</a></li>
+                <li><a href="team.html" class="footer-link hover:underline">Meet the team</a></li>
+                <li><a href="alumni.html" class="footer-link hover:underline">OFAG Alumni</a></li>
+                <li><a href="#" class="footer-link hover:underline">Feedback</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+            &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        const fileSystem = {
+            '2004 E.C Annual Year Reports': {
+                year: '2004/2005 Audit Year',
+                children: {
+                    'Financial Audits': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Financial Statement Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                    'Performance Audits': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                }
+            },
+            '2005 E.C Annual Year Reports': { year: '2005/2006 Audit Year', children: { 'Summary Report.pdf': { year: '2005/2006 Audit Year', type: 'file' } } },
+            '2006 E.C Annual Year Reports': { year: '2006/2007 Audit Year', children: { 'Annual Report.pdf': { year: '2006/2007 Audit Year', type: 'file' } } },
+            '2007 E.C Annual Year Reports': { year: '2007/2008 Audit Year', children: { 'Full Report.pdf': { year: '2007/2008 Audit Year', type: 'file' } } },
+            '2008 E.C Annual Year Reports': { year: '2008/2009 Audit Year', children: { 'Audit Highlights.pdf': { year: '2008/2009 Audit Year', type: 'file' } } },
+            '2009 E.C Annual Year Reports': { year: '2009/2010 Audit Year', children: { 'Complete Audit.pdf': { year: '2009/2010 Audit Year', type: 'file' } } },
+            '2010 E.C Annual Year Reports': {
+                year: '2010/2011 Audit Year',
+                children: {
+                    'IT Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'IT Systems Security Audit.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Value for Money Audit.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Regularity Audit': {
+                        year: '2010/2011 Audit Year',
+                        type: 'folder',
+                        children: {
+                            'All Abari': { year: '2010/2011 Audit Year', type: 'file' },
+                            'Liyu Liyu': { year: '2010/2011 Audit Year', type: 'file' },
+                            'Zegeba': { year: '2010/2011 Audit Year', type: 'file' }
+                        }
+                    },
+                    'Speech to Parliament': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Parliamentary Address.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Annexes': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Supporting Documents.pdf': { year: '2010/2011 Audit Year', type: 'file' } } }
+                }
+            },
+            '2011 E.C Annual Year Reports': { year: '2011/2012 Audit Year', children: { '2011 Report.pdf': { year: '2011/2012 Audit Year', type: 'file' } } },
+            '2012 E.C Annual Year Reports': { year: '2012/2013 Audit Year', children: { '2012 Report.pdf': { year: '2012/2013 Audit Year', type: 'file' } } },
+            '2013 E.C Annual Year Reports': { year: '2013/2014 Audit Year', children: { '2013 Report.pdf': { year: '2013/2014 Audit Year', type: 'file' } } },
+        };
+
+        let viewMode = 'years'; // 'years' or 'tree'
+        let selectedYear = null;
+        let currentPage = 1;
+        const itemsPerPage = 8;
+
+        const fileListEl = document.getElementById('file-list');
+        const breadcrumbsEl = document.getElementById('breadcrumbs');
+        const paginationEl = document.getElementById('pagination-controls');
+
+        function render() {
+            if (viewMode === 'years') {
+                renderYearListView();
+            } else {
+                renderTreeView();
+            }
+        }
+
+        function renderYearListView() {
+            breadcrumbsEl.innerHTML = `<span>Annual Audit Reports</span>`;
+            fileListEl.innerHTML = '';
+            
+            const years = Object.keys(fileSystem);
+            const totalPages = Math.ceil(years.length / itemsPerPage);
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const yearsToShow = years.slice(start, end);
+
+            for (const yearName of yearsToShow) {
+                const yearData = fileSystem[yearName];
+                const item = document.createElement('div');
+                item.className = 'group flex justify-between items-center p-3 rounded-md hover:bg-blue-50 cursor-pointer border-b';
+                item.onclick = () => showTreeView(yearName);
+                item.innerHTML = `
+                    <div class="flex items-center">
+                        <img src="/assets/icons/folder.png" alt="Folder" class="h-6 w-6 mr-4">
+                        <div>
+                            <p class="font-semibold text-mainblue">${yearName}</p>
+                            <p class="text-sm text-gray-500">${yearData.year}</p>
+                        </div>
+                    </div>
+                    <a href="#" class="hidden group-hover:flex items-center text-mainblue font-semibold text-sm" onclick="event.stopPropagation()">
+                        Download <i class="fas fa-download ml-2"></i>
+                    </a>
+                `;
+                fileListEl.appendChild(item);
+            }
+            renderPagination(totalPages);
+        }
+        
+        function renderTreeView() {
+            const yearData = fileSystem[selectedYear];
+            breadcrumbsEl.innerHTML = `<span class="cursor-pointer hover:underline" onclick="showYearListView()">Annual Audit Reports</span> &gt; <span>${selectedYear}</span>`;
+            fileListEl.innerHTML = createTreeHtml(yearData.children, 0);
+
+            // Add event listeners for the newly rendered folder toggles
+            document.querySelectorAll('.folder-toggle').forEach(el => {
+                el.addEventListener('click', () => {
+                    const sublistId = el.dataset.sublist;
+                    const sublist = document.getElementById(sublistId);
+                    sublist.classList.toggle('hidden');
+                });
+            });
+            
+            // No pagination in tree view, just a back button
+            paginationEl.innerHTML = `<button onclick="showYearListView()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-300">Back</button>`;
+        }
+        
+        function createTreeHtml(children, level) {
+            let html = '';
+            const indent = level * 24; // 24px indent per level
+            
+            for (const name in children) {
+                const item = children[name];
+                const isFolder = item.type === 'folder';
+                const icon = isFolder ? '/assets/icons/folder.png' : '/assets/icons/pdf-white.png';
+                const sublistId = `sublist-l${level}-${name.replace(/[^a-zA-Z0-9]/g, '-')}`;
+
+                html += `<div style="padding-left: ${indent}px;">`;
+
+                // The visible item row
+                if (isFolder) {
+                    html += `<div class="flex items-center p-3 rounded-md hover:bg-gray-100 cursor-pointer border-b folder-toggle" data-sublist="${sublistId}">`;
+                } else {
+                    html += `<div class="flex items-center p-3 rounded-md hover:bg-gray-100 cursor-pointer border-b">`;
+                }
+                
+                html += `
+                    <img src="${icon}" alt="${item.type || 'folder'}" class="h-6 w-6 mr-4">
+                    <div>
+                        <p class="font-semibold text-mainblue">${name}</p>
+                        ${item.year ? `<p class="text-sm text-gray-500">${item.year}</p>` : ''}
+                    </div>
+                </div>`;
+
+                // If it's a folder, recursively call to render its children in a hidden div
+                if (isFolder && item.children && Object.keys(item.children).length > 0) {
+                     html += `<div id="${sublistId}" class="hidden">`;
+                     html += createTreeHtml(item.children, level + 1);
+                     html += `</div>`;
+                }
+                html += `</div>`;
+            }
+            return html;
+        }
+
+
+        function renderPagination(totalPages) {
+            if (totalPages <= 1) {
+                paginationEl.innerHTML = '';
+                return;
+            }
+            
+            let prevDisabled = currentPage === 1 ? 'disabled' : '';
+            let nextDisabled = currentPage === totalPages ? 'disabled' : '';
+            
+            paginationEl.innerHTML = `
+                <button onclick="changePage(${currentPage - 1})" ${prevDisabled} class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                <span class="text-sm text-gray-600">Page ${currentPage} of ${totalPages}</span>
+                <button onclick="changePage(${currentPage + 1})" ${nextDisabled} class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+            `;
+        }
+        
+        function showYearListView() {
+            viewMode = 'years';
+            selectedYear = null;
+            render();
+        }
+
+        function showTreeView(yearName) {
+            viewMode = 'tree';
+            selectedYear = yearName;
+            render();
+        }
+
+        function changePage(page) {
+            if (page > 0 && page <= Math.ceil(Object.keys(fileSystem).length / itemsPerPage)) {
+                currentPage = page;
+                render();
+            }
+        }
+        
+        render();
+    </script>
+</body>
+</html> 

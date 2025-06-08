@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFAG - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="bg-white">
+    <!-- Header and Navigation Bar (Duplicated from Home Page) -->
+    <header class="bg-white border-b">
+        <!-- Patterned background -->
+        <div class="relative" style="height: 160px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="relative flex items-center justify-center h-full">
+                <!-- Centered group: Amharic, logo, English -->
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                </div>
+                <!-- Search and Language on the right -->
+                <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                    <span class="text-[#2c4067] font-medium text-base">En</span>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Home</a></li>
+                    <li><a href="about.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">About us</a></li>
+                    <li><a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Services</a></li>
+                    <li><a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Media Center</a></li>
+                    <li><a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Announcements</a></li>
+                    <li><a href="legislations.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Publications</a></li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
+                    <li><a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Portal</a></li>
+                    <li><a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header and Navigation Bar -->
+
+    <!-- Hero/Banner Section -->
+    <section class="relative">
+        <!-- Banner image -->
+        <img src="/assets/banners/about-banner.jpg" alt="About OFAG" class="w-full h-[60vh] object-cover object-right-bottom" />
+        
+        <!-- Blue overlay section -->
+        <div class="bg-mainblue text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-white text-[48px] md:text-[64px] font-bold mb-8">About OFAG</h1>
+                <div class="max-w-7xl mx-auto">
+                    <p class="text-white text-lg md:text-[20px] font-light leading-[32px] tracking-wide">
+                        WE UPHOLD EXCELLENCE IN CHECK AND BALANCE THROUGH FACTUAL GOVERNMENTAL AUDITS. ROOTED IN INNOVATION AND COMMITMENT TO KEEPING GOVERNMENT ENTITIES HONEST, WE UNLEASH POTENTIAL IN EVERY AUDIT ASPECT, FROM PROFESSIONALS TO ENTHUSIASTS. WITH A DYNAMIC PERSONALITY AND A PROMISE OF QUALITY, WE DELIVER A FUTURE BLENDING PERFORMANCE AND AUDITING, ENSURING TRANSPARENCY AND VALUE, EFFICIENCY, AND TIME IN GOVERNMENT OPERATIONS
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+    <!-- Our Achievements Section -->
+    <section id="achievements-section" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Description text centered -->
+              
+                
+                <!-- Main content area -->
+                <div class="flex flex-wrap items-center gap-16 ">
+                    <!-- Left side: Progress circle -->
+                    <div class="flex flex-col items-center justify-center  h-full ">
+                        <div class="relative mb-6" style="width: 298px; height: 171px;">
+                            <!-- Background semicircle -->
+                            <svg width="298" height="171" viewBox="0 0 298 171">
+                                <path
+                                    d="M 25 149 A 124 124 0 0 1 273 149"
+                                    stroke="#E5E7EB"
+                                    stroke-width="25"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                />
+                                                            <!-- Progress semicircle -->
+                            <path
+                                d="M 25 149 A 124 124 0 0 1 273 149"
+                                stroke="#2c4067"
+                                stroke-width="25"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-dasharray="389.56"
+                                stroke-dashoffset="389.56"
+                                class="progress-semicircle"
+                            />
+                            </svg>
+                            <!-- Percentage text -->
+                            <div class="absolute inset-0 flex items-center justify-center" style="margin-top: 60px;">
+                                <span class="text-mainblue text-[36px] font-bold progress-text">0%</span>
+                            </div>
+                        </div>
+                        <h3 class="text-mainblue text-[36px] font-bold text-center">Audit Quality</h3>
+                    </div>
+
+                    <!-- Right side: Heading and Statistics -->
+                    <div class="flex-1 ml-32">
+                        <p class="text-mainblue text-lg md:text-[24px] font-light leading-[40px] text-left mb-12">
+                            Office of the Federal Auditor General (OFAG) is mainly responsible for the overall audit tasks of the country.
+                        </p>
+                        <!-- Achievements heading aligned with statistics -->
+                        <h2 class="text-mainblue text-[48px] font-bold mb-16 text-left">Our Achievements</h2>
+                        
+                        <!-- Statistics Grid -->
+                        <div class="grid grid-cols-3 gap-x-16 gap-y-12">
+                            <div class="text-left">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">100%</div>
+                                <div class="text-mainblue text-[18px] font-medium">Regularity Audit</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">60%</div>
+                                <div class="text-mainblue text-[18px] font-medium">Performance Audit</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">10%</div>
+                                <div class="text-mainblue text-[18px] font-medium">IT Audit</div>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">65%</div>
+                                <div class="text-mainblue text-[18px] font-medium">Environmental<br>Audit</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">100%</div>
+                                <div class="text-mainblue text-[18px] font-medium">Special Audit</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-mainblue text-[48px] font-bold mb-2">72%</div>
+                                <div class="text-mainblue text-[18px] font-medium">Overall Audit<br>Coverage</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes semicircleAnimation {
+            from {
+                stroke-dashoffset: 389.56;
+            }
+            to {
+                stroke-dashoffset: 58.43; /* 85% of 389.56 */
+            }
+        }
+
+        .progress-semicircle {
+            transition: stroke-dashoffset 2s ease-out;
+        }
+
+        .progress-semicircle.animate {
+            animation: semicircleAnimation 2s ease-out forwards;
+        }
+
+        /* Counter animation */
+        .progress-text {
+            /* No default animation - will be triggered by JS */
+        }
+
+        @keyframes countUp {
+            from { 
+                content: "0%"; 
+            }
+            to { 
+                content: "85%"; 
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const achievementsSection = document.getElementById('achievements-section');
+            const progressText = document.querySelector('.progress-text');
+            const progressCircle = document.querySelector('.progress-semicircle');
+            let animationTriggered = false;
+
+            // Intersection Observer to watch when section comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animationTriggered) {
+                        animationTriggered = true;
+                        startAnimations();
+                    }
+                });
+            }, {
+                threshold: 0.5, // Trigger when 50% of the section is visible
+                rootMargin: '0px 0px -100px 0px' // Trigger a bit before the section is fully visible
+            });
+
+            observer.observe(achievementsSection);
+
+            function startAnimations() {
+                // Start CSS animation for progress circle
+                progressCircle.classList.add('animate');
+
+                // Start counter animation
+                const startTime = performance.now() + 500; // Start after 500ms delay
+                const duration = 2000; // 2 seconds - same as CSS animation
+                const startValue = 0;
+                const endValue = 85;
+
+                function easeOut(t) {
+                    // Same easing function as CSS ease-out
+                    return 1 - Math.pow(1 - t, 3);
+                }
+
+                function updateCounter(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    
+                    if (elapsed < 0) {
+                        // Animation hasn't started yet
+                        requestAnimationFrame(updateCounter);
+                        return;
+                    }
+                    
+                    if (elapsed >= duration) {
+                        // Animation complete
+                        progressText.textContent = '85%';
+                        return;
+                    }
+
+                    // Calculate progress (0 to 1)
+                    const progress = elapsed / duration;
+                    const easedProgress = easeOut(progress);
+                    const currentValue = Math.floor(startValue + (endValue - startValue) * easedProgress);
+                    
+                    progressText.textContent = currentValue + '%';
+                    requestAnimationFrame(updateCounter);
+                }
+
+                // Start counter animation
+                requestAnimationFrame(updateCounter);
+            }
+        });
+    </script>
+
+    <!-- Values, Mission, Vision Section -->
+    <section class="py-16 bg-mainblue relative overflow-hidden">
+        <!-- Pattern overlay -->
+        <div class="absolute inset-0 w-full h-full" style="background-image: url('/assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+        <div class="relative container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Values Card -->
+                <div class="text-center flex flex-col h-full">
+                    <img src="/assets/icons/values.png" alt="Values" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-white text-[32px] font-bold mb-6">Values</h3>
+                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
+                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                            contribute towards enhancing good governance and effectiveness of the government institutions' per formance by undertaking independent audit services based on international standards and supreme audit institutions
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="text-center flex flex-col h-full">
+                    <img src="/assets/icons/mission.png" alt="Mission" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-white text-[32px] font-bold mb-6">Mission</h3>
+                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
+                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                            to be a model sai in africa, that contributes to transparency and accountability for the benefit of "ethiopian" citizens by 2030.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="text-center flex flex-col h-full">
+                    <img src="/assets/icons/vision.png" alt="Vision" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-white text-[32px] font-bold mb-6">Vision</h3>
+                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
+                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                            our organization is built on unwavering integrity. we adhere to the highest ethical standards, ensuring honesty guides every decision and action. by prioritizing integrity, we earn the trust and confidence of the public. fostering strong relationships built on credibility and reliability. integrity is not just a value; it's a fundamental principle shaping our culture and driving us toward excellence
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Statistics Section -->
+    <section class="bg-[#F4F6F7] py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Retail Auditors -->
+                <div class="text-center">
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">325</div>
+                    <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Retail Auditors</div>
+                </div>
+                
+                <!-- Performance Auditors -->
+                <div class="text-center">
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">75</div>
+                    <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Performance<br>Auditors</div>
+                </div>
+                
+                <!-- IT Auditors -->
+                <div class="text-center">
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">3</div>
+                    <div class="text-mainblue text-[18px] md:text-[20px] font-medium">IT Auditors</div>
+                </div>
+                
+                <!-- Total Employees -->
+                <div class="text-center">
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">610</div>
+                    <div class="text-mainblue text-[18px] md:text-[20px] font-medium">OFAG Total<br>Employees</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legislations Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-7xl mx-auto">
+                <h2 class="text-mainblue text-[48px] font-bold mb-8">Legislations</h2>
+                <p class="text-mainblue text-lg md:text-[20px] font-light leading-[32px] mb-12">
+                    Explore key legal frameworks and foundational documents that define our mandate and reporting structure. Access proclamations, constitutional provisions, and reporting guidelines that shape governance and accountability.
+                </p>
+                <a href="legislations.html" class="inline-block bg-mainblue text-white font-medium text-[18px] px-12 py-4 rounded-lg hover:bg-blue-900 transition-colors">
+                    View Legislations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auditor General's Message Section -->
+    <section class="bg-[#F4F6F7] py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
+                <!-- Left: Image -->
+                <div class="flex-1">
+                    <img src="/assets/auditor-general-message.png" alt="H.E Meseret Damte" class="w-full rounded-xl object-cover" />
+                </div>
+                
+                <!-- Right: Content -->
+                <div class="flex-1">
+                    <div class="text-mainblue font-semibold text-[20px] mb-4">H.E Meseret Damte</div>
+                    <h2 class="text-mainblue font-bold text-[36px] md:text-[42px] mb-6">Auditor General's Message</h2>
+                    <p class="text-gray-600 text-[16px] leading-relaxed mb-8 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisl nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
+                    </p>
+                    <a href="about.html" class="inline-block px-8 py-3 border border-mainblue text-mainblue font-medium rounded-md hover:bg-mainblue hover:text-white transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Management Team Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
+                <!-- Left: Content -->
+                <div class="flex-1">
+                    <div class="text-mainblue font-medium text-[18px] mb-4">Get to know us</div>
+                    <h2 class="text-mainblue font-bold text-[36px] md:text-[42px] mb-6">Meet the Management Team</h2>
+                    <p class="text-mainblue text-[16px] leading-relaxed mb-6 text-justify">
+                        At the Office of the Federal Auditor General of Ethiopia, our management team is dedicated to ensuring transparency, accountability, and the efficient use of public resources.
+                    </p>
+                    <p class="text-mainblue text-[16px] leading-relaxed mb-8 text-justify">
+                        Comprising experienced professionals with a deep commitment to good governance, our managers guide the institution in delivering reliable audit services that foster trust and integrity.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="inline-block px-8 py-3 border border-mainblue text-mainblue font-medium rounded-md hover:bg-mainblue hover:text-white transition-colors">
+                            Organizational structure
+                        </a>
+                        <a href="team.html" class="inline-block px-8 py-3 bg-mainblue text-white font-medium rounded-md hover:bg-blue-900 transition-colors">
+                            Meet the Team
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="flex-1">
+                    <img src="/assets/team/management-team.png" alt="Management Team" class="w-full rounded-xl object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions Section -->
+    <section class="bg-[#F4F6F7] py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-mainblue text-[42px] font-bold text-center mb-6">Frequently Asked Questions</h2>
+                <p class="text-mainblue text-[16px] text-center leading-relaxed mb-12">
+                    Got a question? Find your answer here from the list of our frequently asked questions! If you don't see your question in our list, feel free to contact us and submit your questions.
+                </p>
+                
+                <!-- FAQ Accordion - Two Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 - Expanded -->
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(1)">
+                                <span class="text-mainblue font-semibold text-[18px]">What is the role of the Office of the Federal Auditor General?</span>
+                                <span id="icon-1" class="text-mainblue text-[24px] font-bold">−</span>
+                            </button>
+                            <div id="content-1" class="px-6 pb-6">
+                                <p class="text-gray-600 text-[16px] leading-relaxed">
+                                    The Office ensures accountability by auditing government entities to verify that public funds are used legally, efficiently, and effectively.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(2)">
+                                <span class="text-mainblue font-semibold text-[18px]">Are audit recommendations legally binding?</span>
+                                <span id="icon-2" class="text-mainblue text-[24px] font-bold">+</span>
+                            </button>
+                            <div id="content-2" class="px-6 pb-6 hidden">
+                                <p class="text-gray-600 text-[16px] leading-relaxed">
+                                    Yes, audit recommendations are legally binding and entities must implement them within specified timeframes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(3)">
+                                <span class="text-mainblue font-semibold text-[18px]">Can the public request specific audits?</span>
+                                <span id="icon-3" class="text-mainblue text-[24px] font-bold">+</span>
+                            </button>
+                            <div id="content-3" class="px-6 pb-6 hidden">
+                                <p class="text-gray-600 text-[16px] leading-relaxed">
+                                    The public can submit requests through our official channels, which are evaluated based on our audit criteria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(4)">
+                                <span class="text-mainblue font-semibold text-[18px]">Where can I find the Auditor General's Annual Reports?</span>
+                                <span id="icon-4" class="text-mainblue text-[24px] font-bold">+</span>
+                            </button>
+                            <div id="content-4" class="px-6 pb-6 hidden">
+                                <p class="text-gray-600 text-[16px] leading-relaxed">
+                                    Annual reports are available on our publications page and can be downloaded from our official website.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="bg-white rounded-lg shadow-sm">
+                            <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(5)">
+                                <span class="text-mainblue font-semibold text-[18px]">Who does the Office of the Federal Auditor General report to?</span>
+                                <span id="icon-5" class="text-mainblue text-[24px] font-bold">+</span>
+                            </button>
+                            <div id="content-5" class="px-6 pb-6 hidden">
+                                <p class="text-gray-600 text-[16px] leading-relaxed">
+                                    The Office reports directly to Parliament and maintains independence in its audit functions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="faq.html" class="inline-block px-8 py-3 border border-mainblue text-mainblue font-medium rounded-md hover:bg-mainblue hover:text-white transition-colors">
+                        Explore More Questions
+                    </a>
+                    <a href="contact.html" class="inline-block px-8 py-3 bg-mainblue text-white font-medium rounded-md hover:bg-blue-900 transition-colors">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFAQ(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+    </script>
+
+    <!-- Vacancy and Announcements CTA Section -->
+    <section class="bg-white pt-24">
+        <div class="container mx-auto px-4">
+            <div class="bg-white  rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 mb-[-60px] shadow-lg max-w-5xl mx-auto relative z-10">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-[24px] font-semibold text-mainblue mb-1">Vacancy and Announcements</div>
+                    <div class="text-mainblue text-lg">Be part of our organization!</div>
+                </div>
+                <a href="vacancy.html" class="bg-mainblue text-white font-medium px-8 py-3 rounded-md text-lg hover:bg-blue-900 transition">Apply Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Duplicated from Home Page) -->
+    <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between gap-12">
+                <!-- Left: Logo and Info -->
+                <div class="flex-1 min-w-[220px]">
+                    <div class="flex items-center mb-4">
+                        <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                    </div>
+                    <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+                    <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
+                    <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
+                    <div class="flex space-x-3 mt-2">
+                        <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                    </div>
+                </div>
+                <!-- Middle: Navigation -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Pages</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
+                        <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">Publications</a></li>
+                        <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
+                        <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
+                        <li><a href="portal.html" class="footer-link hover:underline">OFAG Portal</a></li>
+                        <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Middle: Explore -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Explore</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="services.html" class="footer-link hover:underline">Our Services</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">News & Stories</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Newsletters</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">Manuals & Guidelines</a></li>
+                        <li><a href="faq.html" class="footer-link hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Right: Company -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Company</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="#" class="footer-link hover:underline">Events</a></li>
+                        <li><a href="vacancy.html" class="footer-link hover:underline">Vacancies & Bids</a></li>
+                        <li><a href="team.html" class="footer-link hover:underline">Meet the team</a></li>
+                        <li><a href="alumni.html" class="footer-link hover:underline">OFAG Alumni</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+                &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html> 

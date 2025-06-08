@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="bg-white">
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white border-b">
+        <!-- Patterned background -->
+        <div class="relative" style="height: 160px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="relative flex items-center justify-center h-full">
+                <!-- Centered group: Amharic, logo, English -->
+                <div class="flex items-center space-x-4">
+                  
+                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                 
+                </div>
+                <!-- Search and Language on the right -->
+                <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                    <span class="text-[#2c4067] font-medium text-base">En</span>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">Home</a></li>
+                    <li><a href="about.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">About us</a></li>
+                    <li><a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Services</a></li>
+                    <li><a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Media Center</a></li>
+                    <li><a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Announcements</a></li>
+                    <li><a href="legislations.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Publications</a></li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
+                    <li><a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Portal</a></li>
+                    <li><a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header and Navigation Bar -->
+
+    <!-- Hero/Banner Section -->
+    <section>
+      <!-- Blue bar with text -->
+      <div class="bg-mainblue text-white text-center py-4">
+        <div class="font-bold text-[24px] md:text-2xl">AUDIT FOR THE BENEFIT OF CITIZENS</div>
+        <div class="font-semibold text-base md:text-[24px] mt-1">ኦዲት ለዜጎች ተጠቃሚነት</div>
+      </div>
+      <!-- Banner image -->
+      <img src="/assets/banners/home-banner.png" alt="Auditor General" class="w-full h-[80vh] object-cover" />
+    </section>
+
+    <!-- Separator Pattern Section -->
+    <section class="w-full bg-white py-16">
+      <img src="/assets/patterns/left separator.png" alt="Separator Pattern" class="block w-1/2" />
+    </section>
+
+    <!-- Auditor General's Message Section -->
+    <section class="container mx-auto px-[10vw] py-16 flex flex-col md:flex-row items-center gap-8 ">
+      <!-- Left: Text -->
+      <div class="flex-1 max-w-xl">
+        <div class="text-mainblue font-semibold text-[24px]  mb-4">H.E Meseret Damte</div>
+        <h2 class="text-mainblue font-bold text-3xl mb-4">Auditor General's Message</h2>
+        <p class="text-gray-600 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisi nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
+        </p>
+        <a href="about.html" class="inline-block px-6 py-2 border border-mainblue text-mainblue rounded-md hover:bg-mainblue hover:text-white transition">Read More</a>
+      </div>
+      <!-- Right: Image -->
+      <div class="flex-1 flex justify-center">
+        <img src="/assets/auditor-general-message.png" alt="Auditor General" class="rounded-xl w-full max-w-xl object-cover" />
+      </div>
+    </section>
+
+    <!-- Latest News and Media Section -->
+    <section class="bg-[#F4F6F7] py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-mainblue text-3xl font-bold text-center mb-10">Latest News and Media</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <!-- News Card 1 -->
+          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="/assets/news/news1.png" alt="News 1" class="w-full h-56 object-cover rounded-t-xl" />
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="font-bold text-mainblue mb-3">የኦዲት ግኝቶችን በማስተካከል የማዕድን ሀብት ገቢን ይበልጥ ማሳደግ እንደሚገባ ተገለጸ</div>
+              <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
+            </div>
+          </div>
+          <!-- News Card 2 -->
+          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="/assets/news/news2.png" alt="News 2" class="w-full h-56 object-cover rounded-t-xl" />
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="font-bold text-mainblue mb-3">የኦዲት ባለድርሻ አካላት ፎረም የ2017 በጀት አመት የስራ መጀመሪያ ስብሰባውን አካሄደ</div>
+              <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
+            </div>
+          </div>
+          <!-- News Card 3 -->
+          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="/assets/news/news3.png" alt="News 3" class="w-full h-56 object-cover rounded-t-xl" />
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="font-bold text-mainblue mb-3">የወሎ ተርሸሪ ኬር የህክምናና የማስተማሪያ ሆስፒታል ፕሮጀክት ያሉበትን የአፈጻጸም ችግሮች አስወግዶ የተነሳበትን ዓላማ እንዲያሳካ ተጠየቀ</div>
+              <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="news.html" class="bg-mainblue text-white font-bold text-[24px] px-8 py-3 rounded-md shadow hover:bg-blue-900 transition">Explore More Media And Announcements</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-16 bg-mainblue relative overflow-hidden" style="">
+      <!-- Pattern overlay -->
+      <div class="absolute inset-0 w-full h-full" style="background-image: url('/assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+      <div class="relative container mx-auto px-4">
+        <h2 class="text-white text-3xl font-bold mb-2 text-center">Our Services</h2>
+        <p class="text-white text-xl mb-10 text-center">We Provide What You Need</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 px-[10%]">
+          <!-- Service Card 1 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/regularity.png" alt="Regularity Auditing" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">Regularity Auditing</div>
+            <div class="text-mainblue text-[16px]">an independent, objective evaluation of an organization's financial and compliance reporting ...</div>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/performance.png" alt="Performance Auditing" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">Performance Auditing</div>
+            <div class="text-mainblue text-[16px]">refers to an independent examination of a program, function, operation or the management ...</div>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/it.png" alt="IT Auditing" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">IT Auditing</div>
+            <div class="text-mainblue text-[16px]">evaluating evidence to determine whether information systems and related ...</div>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/environmental.png" alt="Environmental Auditing" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">Environmental Auditing</div>
+            <div class="text-mainblue text-[16px]">a management tool comprising systematic, documented, periodic and objective</div>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/special.png" alt="Special Auditing" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">Special Auditing</div>
+            <div class="text-mainblue text-[16px]">Special Audits are needed when it is suspected that laws or regulations have been violated in the financial management</div>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+            <img src="/assets/icons/other.png" alt="Other Services" class="h-24 mb-4" />
+            <div class="text-mainblue font-bold text-[24px]  mb-4">Other Services</div>
+            <div class="text-mainblue text-[16px]">Audit Quality Assurance,<br>Audit Consultancy,<br>Audit Capacity Building</div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="services.html" class="border border-white text-white font-medium px-8 py-3 rounded-md hover:bg-white hover:text-mainblue transition">Find More About Our Services</a>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- Separator Pattern Section -->
+    <section class="w-full bg-white py-16 flex justify-end">
+        <img src="/assets/patterns/left separator.png" alt="Separator Pattern" class="block  w-1/2" />
+      </section>
+
+       <!-- About Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-mainblue text-2xl md:text-[48px] font-bold text-center mb-6">About Us</h2>
+          <div class="text-mainblue text-center font-thin  px-[15vw] mx-auto space-y-4 my-16 text-[24px]">
+            <p class="leading-[40px]">
+              OFAG is an overseeing government institution endowed with the legal mandate of inspecting and validating the auditory standings of different government bodies.
+            </p>
+            <p class="leading-[40px]">
+              We value transparency - spearhead accountability and good governance with a cross-functional ways of working incorporating all government bodies as well as regional and city administrations.
+            </p>
+            <p class="leading-[40px]">
+              Since our foundation almost eight decades ago, we have grown to become the role model center of a functioning and efficient government.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <a href="about.html" class="bg-mainblue text-white font-bold px-8 py-2 rounded-md text-lg hover:bg-blue-900 transition">Learn More About Us</a>
+          </div>
+        </div>
+      </section>
+   <!-- Statistics Section -->
+   <section class="bg-[#CCD3DB36] py-10 my-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-7 gap-6 text-center">
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">1.2K+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Regularity<br>Audit</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">1.1K+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Performance<br>Audit</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">6+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">IT</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Environmental<br>Audit</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Special Audit</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Audit Quality</div>
+        </div>
+        <div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue text-base md:text-lg leading-tight">Overall Audit<br>Coverage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Partners and Clients Section (Auto-scrolling) -->
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-mainblue text-[48px] font-bold text-center mb-24">Partners and Clients</h2>
+        <div class="relative overflow-hidden">
+          <div class="flex items-center gap-12 whitespace-nowrap animate-partners-scroll" style="animation: partners-scroll 30s linear infinite;">
+            <img src="/assets/partners/partner1.png" alt="Partner 1" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner2.png" alt="Partner 2" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner3.png" alt="Partner 3" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner4.png" alt="Partner 4" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner5.png" alt="Partner 5" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner6.png" alt="Partner 6" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner7.png" alt="Partner 7" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner8.png" alt="Partner 8" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner9.png" alt="Partner 9" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner10.png" alt="Partner 10" class="h-24 w-auto object-contain inline-block" />
+            <!-- Repeat logos for infinite effect -->
+            <img src="/assets/partners/partner11.png" alt="Partner 1" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner12.png" alt="Partner 2" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner13.png" alt="Partner 3" class="h-24 w-auto object-contain inline-block" />
+            <img src="/assets/partners/partner14.png" alt="Partner 4" class="h-24 w-auto object-contain inline-block" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <div class="container mx-auto px-4">
+        <!-- Content will go here -->
+    </div>
+    <script src="./main.js"></script>
+    <style>
+    @keyframes partners-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    </style>
+
+    <!-- Contact CTA Section -->
+    <section class="bg-white pt-12">
+      <div class="container mx-auto px-4">
+        <div class="bg-[#F4F6F7] rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 mb-[-60px] shadow-lg max-w-7xl mx-auto relative z-10">
+          <div class="mb-4 md:mb-0">
+            <div class="text-[24px] font-medium text-mainblue mb-1">Need more information?</div>
+            <div class="text-mainblue text-lg">Write to us and we will get back to you.</div>
+          </div>
+          <a href="contact.html" class="bg-mainblue text-white font-medium px-8 py-3 rounded-md text-lg hover:bg-blue-900 transition">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between gap-12">
+          <!-- Left: Logo and Info -->
+          <div class="flex-1 min-w-[220px]">
+            <div class="flex items-center mb-4">
+              <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+            </div>
+            <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+            <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
+            <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
+            <div class="flex space-x-3 mt-2">
+              <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+              <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+              <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+              <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+            
+              <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+              <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+              <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+            </div>
+          </div>
+          <!-- Middle: Navigation -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">Pages</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
+              <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
+              <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
+              <li><a href="legislations.html" class="footer-link hover:underline">Publications</a></li>
+              <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
+              <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
+              <li><a href="portal.html" class="footer-link hover:underline">OFAG Portal</a></li>
+              <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Middle: Explore -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">Explore</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="services.html" class="footer-link hover:underline">Our Services</a></li>
+              <li><a href="news.html" class="footer-link hover:underline">News & Stories</a></li>
+              <li><a href="#" class="footer-link hover:underline">Newsletters</a></li>
+              <li><a href="legislations.html" class="footer-link hover:underline">Manuals & Guidelines</a></li>
+              <li><a href="faq.html" class="footer-link hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- Right: Company -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">Company</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="#" class="footer-link hover:underline">Events</a></li>
+              <li><a href="vacancy.html" class="footer-link hover:underline">Vacancies & Bids</a></li>
+              <li><a href="team.html" class="footer-link hover:underline">Meet the team</a></li>
+              <li><a href="alumni.html" class="footer-link hover:underline">OFAG Alumni</a></li>
+              <li><a href="report.html" class="footer-link hover:underline">Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+          &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+        </div>
+      </div>
+    </footer>
+</body>
+</html> 

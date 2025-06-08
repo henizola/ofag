@@ -1,0 +1,28 @@
+/* Custom mainblue color classes */
+.bg-mainblue { background-color: #2B4D7B !important; }
+.text-mainblue { color: #2B4D7B !important; }
+
+/* Footer link styles */
+.footer-link {
+
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+}
+
+.footer-link-header {
+  
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.footer-location {
+ 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 0%;
+}

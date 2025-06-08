@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Recommendation Tracking System - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+    </style>
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="font-sans">
+    <header class="fixed top-0 left-0 right-0 flex justify-between items-center p-6 bg-transparent z-10">
+        <a href="javascript:history.back()" class="text-[#2c4067] hover:text-blue-700 transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+        </a>
+        <button class="text-white bg-[#2c4067] p-2 rounded-md md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </header>
+
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto p-8 md:p-12">
+            
+            <!-- Left Side: Logo and Title -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center p-8">
+                <img src="./assets/header logo.png" alt="OFAG Logo" class="w-full h-auto mb-6">
+                
+            </div>
+
+            <!-- Right Side: Login Form -->
+            <div class="w-full md:w-1/2 flex flex-col items-start justify-center p-8 md:pl-16">
+                <div class="w-full max-w-md">
+                    <div class="text-left mb-8">
+                        <h1 class="text-4xl font-bold text-[#2c4067]">It Help-desl Management system</h1>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-semibold text-[#2c4067]">Please Log In</h2>
+                    </div>
+
+                    <form>
+                        <div class="mb-4">
+                            <label for="username" class="block text-[#2c4067] font-medium mb-2">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter your Username" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c4067] transition-shadow shadow-sm hover:shadow-md">
+                        </div>
+                        <div class="mb-6">
+                            <label for="password" class="block text-[#2c4067] font-medium mb-2">Password</label>
+                            <input type="password" id="password" name="password" placeholder="••••••••" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c4067] transition-shadow shadow-sm hover:shadow-md">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <a href="#" class="text-sm text-[#2c4067] hover:underline">If you forgot your username and/or password contact the system administrator.</a>
+                        </div>
+                        <button type="submit" class="w-full bg-[#2c4067] text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition-colors shadow-md hover:shadow-lg">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html> 

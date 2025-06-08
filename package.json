@@ -1,0 +1,11 @@
+{
+  "name": "ofag",
+  "version": "1.0.0",
+  "description": "OFAG Website",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+} 

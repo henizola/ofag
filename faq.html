@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainblue: '#2c4067',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .faq-item .answer {
+            display: none;
+        }
+        .faq-item.active .answer {
+            display: block;
+        }
+        .faq-item.active .plus-icon {
+            display: none;
+        }
+        .faq-item:not(.active) .minus-icon {
+            display: none;
+        }
+    </style>
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white border-b">
+        <div class="relative" style="height: 160px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="relative flex items-center justify-center h-full">
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                </div>
+                <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                    <span class="text-[#2c4067] font-medium text-base">En</span>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">Home</a></li>
+                    <li><a href="about.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">About us</a></li>
+                    <li><a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Services</a></li>
+                    <li><a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Media Center</a></li>
+                    <li><a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Announcements</a></li>
+                    <li><a href="legislations.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Publications</a></li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
+                    <li><a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Portal</a></li>
+                    <li><a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+      
+   
+        <section class="bg-mainblue py-32 relative">
+            <div class="absolute inset-0 w-full h-full" style="background-image: url('/assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+            <div class="relative container mx-auto px-4">
+                <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 border-l-8 border-mainblue">
+                    <h1 class="text-mainblue text-3xl md:text-[64px] font-bold">Frequently Asked Questions</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- Search Bar -->
+                <div class="mb-12 max-w-2xl mx-auto">
+                    <div class="flex">
+                        <input type="text" placeholder="Search your question here" class="w-full p-4 rounded-l-lg border-t border-b border-l border-gray-200 focus:outline-none">
+                        <button class="bg-mainblue text-white px-8 rounded-r-lg hover:bg-opacity-90">Search</button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Left Column: FAQ Accordion -->
+                    <div class="w-full md:w-2/3 space-y-4">
+                        <div class="faq-item bg-mainblue text-white rounded-lg p-6">
+                            <div class="question flex justify-between items-center cursor-pointer">
+                                <h3 class="font-bold text-lg">General Information</h3>
+                                <div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div>
+                            </div>
+                            <div class="answer mt-4 pt-4 border-t border-opacity-30 border-white space-y-4 text-gray-200">
+                               <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>What is the OFAG?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>The Office of the Federal Auditor General (OFAG) is the supreme audit institution of the country.</p></div>
+                               </div>
+                               <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>What is its primary mission?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>To ensure public resources are used efficiently, effectively, and in accordance with the law.</p></div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-mainblue text-white rounded-lg p-6">
+                            <div class="question flex justify-between items-center cursor-pointer">
+                                <h3 class="font-bold text-lg">Legislation</h3>
+                                <div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div>
+                            </div>
+                             <div class="answer mt-4 pt-4 border-t border-opacity-30 border-white space-y-4 text-gray-200">
+                                <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>What proclamation governs the OFAG?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>The OFAG operates under Proclamation No. 669/2009.</p></div>
+                               </div>
+                             </div>
+                        </div>
+                        <div class="faq-item bg-mainblue text-white rounded-lg p-6">
+                            <div class="question flex justify-between items-center cursor-pointer">
+                                <h3 class="font-bold text-lg">Audit Process</h3>
+                                <div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div>
+                            </div>
+                            <div class="answer mt-4 pt-4 border-t border-opacity-30 border-white space-y-4 text-gray-200">
+                               <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>How are audits initiated?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>Audits are initiated based on an annual plan, risk assessment, and legal mandates.</p></div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-mainblue text-white rounded-lg p-6 active">
+                            <div class="question flex justify-between items-center cursor-pointer">
+                                <h3 class="font-bold text-lg">Public Support</h3>
+                                 <div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div>
+                            </div>
+                            <div class="answer mt-4 pt-4 border-t border-white border-opacity-30 space-y-4 text-gray-200">
+                                <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>How can I contact the Office for further information or inquiries?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4 border-l-2 border-gray-400"><p>You can find our contact details on the Contact Us page.</p></div>
+                                </div>
+                                <div class="faq-item active">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>Can the public request specific audits?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>The Office welcomes public input. While the Auditor General prioritizes audits based on legal mandates, suggestions can be submitted through the "Feedback" section.</p></div>
+                                </div>
+                                <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>How does the Office address public concerns regarding government spending?</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>We take all public concerns seriously and investigate them as part of our audit process.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="faq-item bg-mainblue text-white rounded-lg p-6">
+                            <div class="question flex justify-between items-center cursor-pointer">
+                                <h3 class="font-bold text-lg">Technical And Accessibility Support</h3>
+                                <div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div>
+                            </div>
+                            <div class="answer mt-4 pt-4 border-t border-opacity-30 border-white space-y-4 text-gray-200">
+                                <div class="faq-item">
+                                   <div class="question flex justify-between items-center cursor-pointer"><p>I am having trouble accessing a report.</p><div><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div></div>
+                                   <div class="answer mt-2 pl-4"><p>Please contact our support team via the contact page with details of the issue.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Popular Questions -->
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-mainblue mb-6">Popular Questions</h3>
+                            <div class="space-y-4">
+                                <div class="faq-item">
+                                    <div class="question flex items-start cursor-pointer"><div class="mr-4 text-mainblue"><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div><p class="font-semibold text-gray-800">Where can I find the Auditor General's Annual Reports?</p></div>
+                                    <div class="answer mt-2 ml-8 text-gray-600"><p>You can find them in the "Audit Reports" section of our website.</p></div>
+                                </div>
+                                <div class="faq-item active">
+                                    <div class="question flex items-start cursor-pointer"><div class="mr-4 text-mainblue"><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div><p class="font-semibold text-gray-800">What is the role of the Office of the Federal Auditor General?</p></div>
+                                    <div class="answer mt-2 ml-8 text-gray-600"><p>The Office ensures accountability by auditing government entities to verify that public funds are used legally, efficiently, and effectively.</p></div>
+                                </div>
+                                 <div class="faq-item">
+                                    <div class="question flex items-start cursor-pointer"><div class="mr-4 text-mainblue"><i class="fas fa-plus plus-icon"></i><i class="fas fa-minus minus-icon"></i></div><p class="font-semibold text-gray-800">Can the public request specific audits?</p></div>
+                                     <div class="answer mt-2 ml-8 text-gray-600"><p>Yes, through our feedback section.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Contact CTA Section -->
+      <section class="bg-gray-50 pt-12">
+         <div class="container mx-auto px-4">
+           <div class="bg-white rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 mb-[-60px] shadow-lg max-w-7xl mx-auto relative z-10">
+             <div class="mb-4 md:mb-0 text-center md:text-left">
+               <div class="text-[24px] font-medium text-mainblue mb-1">Couldn't find your questions?</div>
+               <div class="text-mainblue text-lg">Write your questions to us and we will get back to you.</div>
+             </div>
+             <a href="contact.html" class="bg-mainblue text-white font-medium px-8 py-3 rounded-md text-lg hover:bg-blue-900 transition mt-4 md:mt-0">Contact Us</a>
+           </div>
+         </div>
+       </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-mainblue pt-32 pb-10 mt-[-40px]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between gap-12">
+                <!-- Left: Logo and Info -->
+                <div class="flex-1 min-w-[220px]">
+                    <div class="flex items-center mb-4">
+                        <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                    </div>
+                    <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+                    <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
+                    <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
+                    <div class="flex space-x-3 mt-2">
+                        <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                    </div>
+                </div>
+                <!-- Middle: Navigation -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Pages</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
+                        <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Publications</a></li>
+                        <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
+                        <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
+                        <li><a href="portal.html" class="footer-link hover:underline">OFAG Portal</a></li>
+                        <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Middle: Explore -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Explore</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="services.html" class="footer-link hover:underline">Our Services</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">News & Stories</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Newsletters</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">Manuals & Guidelines</a></li>
+                        <li><a href="faq.html" class="footer-link hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Right: Company -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Company</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="#" class="footer-link hover:underline">Events</a></li>
+                        <li><a href="announcements.html" class="footer-link hover:underline">Vacancies & Bids</a></li>
+                        <li><a href="team.html" class="footer-link hover:underline">Meet the team</a></li>
+                        <li><a href="alumni.html" class="footer-link hover:underline">OFAG Alumni</a></li>
+                        <li><a href="report.html" class="footer-link hover:underline">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+                &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-item .question').forEach(question => {
+            question.addEventListener('click', (e) => {
+                const faqItem = question.closest('.faq-item');
+                
+                // If this is a main category accordion on the left
+                if (faqItem.parentElement.classList.contains('w-full')) {
+                     // Deactivate other main categories
+                     document.querySelectorAll('.w-full.md\\:w-2\\/3 > .space-y-4 > .faq-item.active').forEach(activeItem => {
+                        if (activeItem !== faqItem) {
+                            activeItem.classList.remove('active');
+                        }
+                    });
+                }
+                
+                faqItem.classList.toggle('active');
+
+                // Stop the click from bubbling up to parent faq-items
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html> 

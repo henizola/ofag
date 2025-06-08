@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainblue: '#2c4067',
+                    }
+                }
+            }
+        }
+    </script>
+ <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mainblue: '#2c4067',
+                  }
+              }
+          }
+      }
+  </script>
+</head>
+<body class="font-sans">
+    <!-- Header and Navigation Bar (Duplicated from About Page) -->
+    <header class="bg-white border-b">
+        <!-- Patterned background -->
+        <div class="relative" style="height: 160px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="relative flex items-center justify-center h-full">
+                <!-- Centered group: Amharic, logo, English -->
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                </div>
+                <!-- Search and Language on the right -->
+                <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                    <span class="text-[#2c4067] font-medium text-base">En</span>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">Home</a></li>
+                    <li><a href="about.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">About us</a></li>
+                    <li><a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Services</a></li>
+                    <li><a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Media Center</a></li>
+                    <li><a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Announcements</a></li>
+                    <li><a href="legislations.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Publications</a></li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
+                    <li><a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Portal</a></li>
+                    <li><a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header and Navigation Bar -->
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero/Banner Section -->
+        <section class="relative h-[80vh] mb-[200px]">
+            <!-- Background image -->
+            <img src="/assets/banners/team.png" alt="OFAG Team" class="w-full h-[80vh] object-cover" />
+            
+            <!-- Content overlay -->
+            <div class="absolute -bottom-[30%] left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                <div class="bg-white bg-opacity-95 rounded-lg p-12 max-w-4xl mx-4 shadow-lg">
+                    <h1 class="text-mainblue text-[48px] md:text-[56px] font-bold mb-6">Meet the team</h1>
+                    <div class="space-y-6 text-gray-600 text-[16px] lg:text-[18px] leading-relaxed">
+                        <p>
+                            At the Office of the Federal Auditor General of Ethiopia, our management team is dedicated to ensuring transparency, accountability, and the efficient use of public resources.
+                        </p>
+                        
+                        <p>
+                            Comprising experienced professionals with a deep commitment to good governance, our managers guide the institution in delivering reliable audit services that foster trust and integrity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Profiles Section -->
+        <section class="bg-[#F4F6F7] py-16 mt-[300px]">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="space-y-20">
+                    <!-- H.E Meseret Damte -->
+                    <div class="flex flex-col lg:flex-row items-start gap-12">
+                        <!-- Photo -->
+                        <div class="flex-1">
+                            <img src="/assets/team/meseret-damte.png" alt="H.E Meseret Damte" class="w-full  rounded-lg shadow-lg object-cover" />
+                        </div>
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <h3 class="text-mainblue text-[28px] font-bold mb-2">H.E Meseret Damte</h3>
+                            <p class="text-mainblue text-[18px] font-medium mb-6">Auditor General</p>
+                            <p class="text-gray-600 text-[16px] leading-relaxed mb-8">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisl nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
+                            </p>
+                            <!-- Social Media Icons -->
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- H.E Abera Tadesse -->
+                    <div class="flex flex-col lg:flex-row items-start gap-12">
+                        <!-- Content (Left side for desktop) -->
+                        <div class="flex-1 order-2 lg:order-1">
+                            <h3 class="text-mainblue text-right text-[28px] font-bold mb-2">H.E Abera Tadesse</h3>
+                            <p class="text-mainblue text-[18px]  text-right font-medium mb-6">Deputy Auditor General - Audit Operation</p>
+                            <p class="text-gray-600 text-[16px]  text-right leading-relaxed mb-8">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisl nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
+                            </p>
+                            <!-- Social Media Icons -->
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Photo (Right side for desktop) -->
+                        <div class="flex-1 order-1 lg:order-2">
+                            <img src="/assets/team/abera-tadesse.png" alt="H.E Abera Tadesse" class="w-full  rounded-lg shadow-lg object-cover ml-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board of Directors Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <!-- Section Title -->
+                <h2 class="text-mainblue text-[36px] font-bold text-center mb-12">Board of Directors</h2>
+                
+                <!-- Directors Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-gray-300 w-full h-48 rounded-lg mb-4"></div>
+                        <h4 class="text-mainblue text-[16px] font-semibold mb-1">Aweke Tenaw</h4>
+                        <p class="text-mainblue text-[14px] font-light mb-2">Head of the Auditor General Office</p>
+                        <p class="text-mainblue text-[12px] font-light mb-3">📞 +251 115118526</p>
+                        <div class="flex justify-center space-x-2">
+                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!-- Audit For The Benefit Of Citizens Section -->
+      <section class="bg-[#f6f8f9] rounded-2xl  mx-4 pb-10 md:mx-0">
+        <div class="container mx-auto px-8 py-16 flex flex-col md:flex-row items-center justify-between max-w-7xl">
+          <div class="mb-8 md:mb-0">
+            <h2 class="text-mainblue text-3xl md:text-4xl font-thin mb-6">Audit For The Benefit Of Citizens!</h2>
+            <p class="text-mainblue text-xl md:text-2xl font-thin max-w-xl">Discover more about the Office of the Federal Auditor General (OFAG)</p>
+          </div>
+          <a href="about.html" class="bg-mainblue text-white text-xl px-12 py-6 rounded-md font-normal hover:bg-[#1e2d47] transition">About Us</a>
+        </div>
+      </section>
+  
+ 
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-mainblue pt-24 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between gap-12">
+                <!-- Left: Logo and Info -->
+                <div class="flex-1 min-w-[220px]">
+                    <div class="flex items-center mb-4">
+                        <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                    </div>
+                    <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+                    <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
+                    <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
+                    <div class="flex space-x-3 mt-2">
+                        <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                        <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                    </div>
+                </div>
+                <!-- Middle: Navigation -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Pages</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
+                        <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Publications</a></li>
+                        <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
+                        <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
+                        <li><a href="#" class="footer-link hover:underline">OFAG Portal</a></li>
+                        <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Middle: Explore -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Explore</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="services.html" class="footer-link hover:underline">Our Services</a></li>
+                        <li><a href="news.html" class="footer-link hover:underline">News & Stories</a></li>
+                        <li><a href="#" class="footer-link hover:underline">Newsletters</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">Manuals & Guidelines</a></li>
+                        <li><a href="faq.html" class="footer-link hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Right: Company -->
+                <div class="flex-1 min-w-[180px]">
+                    <div class="footer-link-header text-white font-bold mb-3">Company</div>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><a href="#" class="footer-link hover:underline">Events</a></li>
+                        <li><a href="vacancy.html" class="footer-link hover:underline">Vacancies & Bids</a></li>
+                        <li><a href="team.html" class="footer-link hover:underline">Meet the team</a></li>
+                        <li><a href="alumni.html" class="footer-link hover:underline">OFAG Alumni</a></li>
+                        <li><a href="report.html" class="footer-link hover:underline">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+                &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html> 
