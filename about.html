@@ -23,11 +23,11 @@
     <header class="bg-white border-b">
         <!-- Patterned background -->
         <div class="relative" style="height: 160px;">
-            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('./assets/header pattern.png');"></div>
             <div class="relative flex items-center justify-center h-full">
                 <!-- Centered group: Amharic, logo, English -->
                 <div class="flex items-center space-x-4">
-                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                    <img src="./assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
                 </div>
                 <!-- Search and Language on the right -->
                 <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
@@ -60,7 +60,7 @@
     <!-- Hero/Banner Section -->
     <section class="relative">
         <!-- Banner image -->
-        <img src="/assets/banners/about-banner.jpg" alt="About OFAG" class="w-full h-[60vh] object-cover object-right-bottom" />
+        <img src="./assets/banners/about-banner.jpg" alt="About OFAG" class="w-full h-[60vh] object-cover object-right-bottom" />
         
         <!-- Blue overlay section -->
         <div class="bg-mainblue text-white py-16">
@@ -262,12 +262,12 @@
     <!-- Values, Mission, Vision Section -->
     <section class="py-16 bg-mainblue relative overflow-hidden">
         <!-- Pattern overlay -->
-        <div class="absolute inset-0 w-full h-full" style="background-image: url('/assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+        <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
         <div class="relative container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Values Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="/assets/icons/values.png" alt="Values" class="h-16 w-auto mx-auto mb-6" />
+                    <img src="./assets/icons/values.png" alt="Values" class="h-16 w-auto mx-auto mb-6" />
                     <h3 class="text-white text-[32px] font-bold mb-6">Values</h3>
                     <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
                         <p class="text-white text-[16px] leading-relaxed text-justify">
@@ -278,7 +278,7 @@
 
                 <!-- Mission Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="/assets/icons/mission.png" alt="Mission" class="h-16 w-auto mx-auto mb-6" />
+                    <img src="./assets/icons/mission.png" alt="Mission" class="h-16 w-auto mx-auto mb-6" />
                     <h3 class="text-white text-[32px] font-bold mb-6">Mission</h3>
                     <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
                         <p class="text-white text-[16px] leading-relaxed text-justify">
@@ -289,7 +289,7 @@
 
                 <!-- Vision Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="/assets/icons/vision.png" alt="Vision" class="h-16 w-auto mx-auto mb-6" />
+                    <img src="./assets/icons/vision.png" alt="Vision" class="h-16 w-auto mx-auto mb-6" />
                     <h3 class="text-white text-[32px] font-bold mb-6">Vision</h3>
                     <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
                         <p class="text-white text-[16px] leading-relaxed text-justify">
@@ -353,7 +353,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto">
                 <!-- Left: Image -->
                 <div class="flex-1">
-                    <img src="/assets/auditor-general-message.png" alt="H.E Meseret Damte" class="w-full rounded-xl object-cover" />
+                    <img src="./assets/auditor-general-message.png" alt="H.E Meseret Damte" class="w-full rounded-xl object-cover" />
                 </div>
                 
                 <!-- Right: Content -->
@@ -397,7 +397,7 @@
                 
                 <!-- Right: Image -->
                 <div class="flex-1">
-                    <img src="/assets/team/management-team.png" alt="Management Team" class="w-full rounded-xl object-cover" />
+                    <img src="./assets/team/management-team.png" alt="Management Team" class="w-full rounded-xl object-cover" />
                 </div>
             </div>
         </div>
@@ -534,19 +534,19 @@
                 <!-- Left: Logo and Info -->
                 <div class="flex-1 min-w-[220px]">
                     <div class="flex items-center mb-4">
-                        <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                        <img src="./assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
                     </div>
                     <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
                     <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
                     <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
                     <div class="flex space-x-3 mt-2">
-                        <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
-                        <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                        <a href="#"><img src="./assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
                     </div>
                 </div>
                 <!-- Middle: Navigation -->

@@ -33,10 +33,10 @@
     <!-- Header and Navigation Bar -->
     <header class="bg-white border-b">
         <div class="relative" style="height: 160px;">
-            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('/assets/header pattern.png');"></div>
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('./assets/header pattern.png');"></div>
             <div class="relative flex items-center justify-center h-full">
                 <div class="flex items-center space-x-4">
-                    <img src="/assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
+                    <img src="./assets/header logo.png" alt="OFAG Logo" class="h-full w-auto object-contain" />
                 </div>
                 <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-[#2c4067]">
@@ -139,7 +139,7 @@
                 <!-- Report 1 -->
                 <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
                     <div class="flex items-center mb-4 md:mb-0">
-                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <img src="./assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
                         <div>
                             <h3 class="font-bold text-xl">Federal Judicial Admin council 2014 E.C Financial Audit Report</h3>
                             <p class="text-sm opacity-80">Category: Financial Audit Report</p>
@@ -151,7 +151,7 @@
                 <!-- Report 2 -->
                 <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
                     <div class="flex items-center mb-4 md:mb-0">
-                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <img src="./assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
                         <div>
                             <h3 class="font-bold text-xl">Industrial Parks Development Corporation 2014 E.C Performance Audit Report</h3>
                             <p class="text-sm opacity-80">Category: Performance Audit Report</p>
@@ -163,7 +163,7 @@
                 <!-- Report 3 -->
                 <div class="flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-10 p-6 rounded-lg">
                     <div class="flex items-center mb-4 md:mb-0">
-                        <img src="/assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
+                        <img src="./assets/icons/pdf-white.png" alt="PDF" class="h-12 w-12 mr-6">
                         <div>
                             <h3 class="font-bold text-xl">Addis Ababa University Of Science And Technology 2014 E C Performance Audit Report</h3>
                             <p class="text-sm opacity-80">Category: Performance Audit Report</p>
@@ -195,20 +195,20 @@
             <!-- Left: Logo and Info -->
             <div class="flex-1 min-w-[220px]">
               <div class="flex items-center mb-4">
-                <img src="/assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                <img src="./assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
               </div>
               <div class="footer-location text-white text-sm mb-2">Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
               <div class="footer-location text-white text-sm mb-2">info@ofag.gov.et<br>+251 115181250 / +251 115 575701 / +251 115574468</div>
               <div class="footer-location text-white text-sm mb-4">www.ofag.gov.et</div>
               <div class="flex space-x-3 mt-2">
-                <a href="#"><img src="/assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
-                <a href="#"><img src="/assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
-                <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
-                <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
               
-                <a href="#"><img src="/assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
-                <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
-                <a href="#"><img src="/assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                <a href="#"><img src="./assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
               </div>
             </div>
             <!-- Middle: Navigation -->
@@ -325,7 +325,7 @@
                 item.onclick = () => showTreeView(yearName);
                 item.innerHTML = `
                     <div class="flex items-center">
-                        <img src="/assets/icons/folder.png" alt="Folder" class="h-6 w-6 mr-4">
+                        <img src="./assets/icons/folder.png" alt="Folder" class="h-6 w-6 mr-4">
                         <div>
                             <p class="font-semibold text-mainblue">${yearName}</p>
                             <p class="text-sm text-gray-500">${yearData.year}</p>
@@ -365,7 +365,7 @@
             for (const name in children) {
                 const item = children[name];
                 const isFolder = item.type === 'folder';
-                const icon = isFolder ? '/assets/icons/folder.png' : '/assets/icons/pdf-white.png';
+                const icon = isFolder ? './assets/icons/folder.png' : './assets/icons/pdf-white.png';
                 const sublistId = `sublist-l${level}-${name.replace(/[^a-zA-Z0-9]/g, '-')}`;
 
                 html += `<div style="padding-left: ${indent}px;">`;
