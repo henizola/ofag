@@ -28,6 +28,9 @@
           }
       }
   </script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 </head>
 <body class="bg-white">
     <!-- Header and Navigation Bar -->
@@ -77,8 +80,16 @@
         <div class="font-bold text-[24px] md:text-2xl">AUDIT FOR THE BENEFIT OF CITIZENS</div>
         <div class="font-semibold text-base md:text-[24px] mt-1">ኦዲት ለዜጎች ተጠቃሚነት</div>
       </div>
-      <!-- Banner image -->
-      <img src="./assets/banners/home-banner.png" alt="Auditor General" class="w-full h-[80vh] object-cover" />
+      <!-- Banner image slider -->
+      <div class="owl-carousel owl-theme h-[80vh]">
+        <div class="item"><img src="./assets/banners/home-banner.png" alt="Auditor General" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/about-banner.jpg" alt="About Banner" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/services-banner.jpg" alt="Services Banner" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/Property 1=Frame 2.png" alt="Banner 2" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/Property 1=Frame 3.png" alt="Banner 3" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/Property 1=Frame 4.png" alt="Banner 4" class="w-full h-[80vh] object-cover" /></div>
+        <div class="item"><img src="./assets/banners/Property 1=Frame 5.png" alt="Banner 5" class="w-full h-[80vh] object-cover" /></div>
+      </div>
     </section>
 
     <!-- Separator Pattern Section -->
@@ -109,24 +120,24 @@
         <h2 class="text-mainblue text-3xl font-bold text-center mb-10">Latest News and Media</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <!-- News Card 1 -->
-          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
-            <img src="./assets/news/news1.png" alt="News 1" class="w-full h-56 object-cover rounded-t-xl" />
+          <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="./assets/news/news1.png" alt="News 1" class="news-img w-full h-56 object-cover rounded-t-xl" />
             <div class="p-5 flex-1 flex flex-col">
               <div class="font-bold text-mainblue mb-3">የኦዲት ግኝቶችን በማስተካከል የማዕድን ሀብት ገቢን ይበልጥ ማሳደግ እንደሚገባ ተገለጸ</div>
               <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
             </div>
           </div>
           <!-- News Card 2 -->
-          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
-            <img src="./assets/news/news2.png" alt="News 2" class="w-full h-56 object-cover rounded-t-xl" />
+          <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="./assets/news/news2.png" alt="News 2" class="news-img w-full h-56 object-cover rounded-t-xl" />
             <div class="p-5 flex-1 flex flex-col">
               <div class="font-bold text-mainblue mb-3">የኦዲት ባለድርሻ አካላት ፎረም የ2017 በጀት አመት የስራ መጀመሪያ ስብሰባውን አካሄደ</div>
               <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
             </div>
           </div>
           <!-- News Card 3 -->
-          <div class="bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
-            <img src="./assets/news/news3.png" alt="News 3" class="w-full h-56 object-cover rounded-t-xl" />
+          <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="./assets/news/news3.png" alt="News 3" class="news-img w-full h-56 object-cover rounded-t-xl" />
             <div class="p-5 flex-1 flex flex-col">
               <div class="font-bold text-mainblue mb-3">የወሎ ተርሸሪ ኬር የህክምናና የማስተማሪያ ሆስፒታል ፕሮጀክት ያሉበትን የአፈጻጸም ችግሮች አስወግዶ የተነሳበትን ዓላማ እንዲያሳካ ተጠየቀ</div>
               <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
@@ -221,31 +232,31 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-7 gap-6 text-center">
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">1.2K+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="1.2" data-suffix="K+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Regularity<br>Audit</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">1.1K+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="1.1" data-suffix="K+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Performance<br>Audit</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">6+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="6" data-suffix="+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">IT</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="12" data-suffix="+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Environmental<br>Audit</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="12" data-suffix="+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Special Audit</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="12" data-suffix="+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Audit Quality</div>
         </div>
         <div>
-          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1">12+</div>
+          <div class="text-mainblue font-bold text-2xl md:text-3xl mb-1 stat-count" data-target="12" data-suffix="+">0</div>
           <div class="text-mainblue text-base md:text-lg leading-tight">Overall Audit<br>Coverage</div>
         </div>
       </div>
@@ -369,5 +380,128 @@
         </div>
       </div>
     </footer>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 4000,
+          autoplayHoverPause: true,
+          nav: true,
+          dots: true,
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          smartSpeed: 800
+        });
+      });
+    </script>
+    <style>
+      /* Custom Owl Carousel styles for hero slider */
+      .owl-carousel.owl-theme {
+        position: relative;
+      }
+      .owl-carousel .owl-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        display: flex !important;
+        justify-content: center;
+        z-index: 10;
+      }
+      .owl-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+        z-index: 20;
+      }
+      .owl-carousel .owl-nav button.owl-prev,
+      .owl-carousel .owl-nav button.owl-next {
+     
+        color: #2c4067 !important;
+     
+        width: 48px;
+        height: 48px;
+        font-size: 4rem !important;
+      
+        border: none;
+       
+        pointer-events: auto;
+        transition: background 0.2s;
+      }
+      .owl-carousel .owl-nav button.owl-prev:hover,
+      .owl-carousel .owl-nav button.owl-next:hover {
+        background: transparent !important;
+      }
+      .owl-carousel .owl-nav button.owl-prev {
+        margin-left: 16px;
+      }
+      .owl-carousel .owl-nav button.owl-next {
+        margin-right: 16px;
+      }
+    </style>
+    <style>
+      /* News card image scaling on card hover */
+      .news-card {
+        overflow: hidden;
+      }
+      .news-card .news-img {
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+      }
+      .news-card:hover .news-img {
+        transform: scale(1.08);
+      }
+    </style>
+    <script>
+      // Minimal counting animation for stats
+      function animateCount(el, target, suffix, duration = 1600) {
+        let start = 0;
+        let startTimestamp = null;
+        const isK = suffix === 'K+';
+        const decimals = isK ? 1 : 0;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          const value = start + (target - start) * progress;
+          el.textContent = isK ? value.toFixed(decimals) + 'K+' : Math.floor(value) + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = isK ? target.toFixed(decimals) + 'K+' : target + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Trigger animation when stats section is in view
+      let statsAnimated = false;
+      function handleStatsAnimation() {
+        if (statsAnimated) return;
+        const stats = document.querySelectorAll('.stat-count');
+        const section = stats[0]?.closest('section');
+        if (!section) return;
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          stats.forEach(el => {
+            const target = parseFloat(el.getAttribute('data-target'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            animateCount(el, target, suffix);
+          });
+          statsAnimated = true;
+        }
+      }
+      window.addEventListener('scroll', handleStatsAnimation);
+      window.addEventListener('DOMContentLoaded', handleStatsAnimation);
+    </script>
 </body>
 </html> 
