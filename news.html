@@ -124,61 +124,263 @@
 
                 <!-- Right Column: Sidebar -->
                 <aside class="w-full lg:w-1/3 lg:sticky top-8 self-start">
-                    <div class="bg-[#f6f8f9] p-6 rounded-lg shadow-sm space-y-6">
-                        <!-- Search Bar -->
-                        <div class="relative">
-                            <input type="text" placeholder="Search" class="w-full pl-10 pr-4 py-2 border rounded-md">
-                            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"></path></svg>
-                        </div>
-                        <!-- Filters -->
-                        <div class="flex items-center justify-between">
-                            <button class="flex items-center space-x-2 text-gray-600">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                <span>Jan 6, 2024 - Jan 15, 2024</span>
-                            </button>
-                            <button class="flex items-center space-x-2 text-gray-600">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M3 8h18M3 12h18M3 16h18M3 20h18"></path></svg>
-                                <span>Sort By</span>
-                            </button>
-                        </div>
+    <div class="bg-[#f6f8f9] p-6 rounded-lg shadow-sm space-y-6">
+        <!-- Search Bar -->
+        <div class="relative">
+            <input type="text" id="searchInput" placeholder="Search" class="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-mainblue focus:border-transparent">
+            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"></path>
+            </svg>
+        </div>
+        
+        <!-- Filters -->
+        <div class="flex items-center justify-between">
+            <button id="dateFilterBtn" class="flex items-center space-x-2 text-gray-600 hover:text-mainblue transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span id="dateRangeText">Jan 6, 2024 - Jan 15, 2024</span>
+            </button>
+            <button id="sortBtn" class="flex items-center space-x-2 text-gray-600 hover:text-mainblue transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M3 8h18M3 12h18M3 16h18M3 20h18"></path>
+                </svg>
+                <span>Sort By</span>
+            </button>
+        </div>
 
-                        <!-- Recent Posts -->
-                        <div class="space-y-4">
-                            <!-- Post 1 -->
-                            <div class="flex items-start space-x-4">
-                                <div class="w-20 h-16 bg-gray-200 rounded"></div>
-                                <div class="flex-1">
-                                    <h4 class="font-semibold text-mainblue text-sm">የፌዴራል ዋና ኦዲተር መሥሪያ ቤትና የክልል...</h4>
-                                    <div class="text-xs text-gray-500">dd/mm/yyyy | Author</div>
-                                </div>
-                            </div>
-                             <!-- Post 2 -->
-                             <div class="flex items-start space-x-4">
-                                <div class="w-20 h-16 bg-gray-200 rounded"></div>
-                                <div class="flex-1">
-                                    <h4 class="font-semibold text-mainblue text-sm">የፌዴራል ዋና ኦዲተር መሥሪያ ቤትና የክልል...</h4>
-                                    <div class="text-xs text-gray-500">dd/mm/yyyy | Author</div>
-                                </div>
-                            </div>
-                             <!-- Post 3 -->
-                             <div class="flex items-start space-x-4">
-                                <div class="w-20 h-16 bg-gray-200 rounded"></div>
-                                <div class="flex-1">
-                                    <h4 class="font-semibold text-mainblue text-sm">የፌዴራል ዋና ኦዲተር መሥሪያ ቤትና የክልል...</h4>
-                                    <div class="text-xs text-gray-500">dd/mm/yyyy | Author</div>
-                                </div>
-                            </div>
-                             <!-- Post 4 -->
-                             <div class="flex items-start space-x-4">
-                                <div class="w-20 h-16 bg-gray-200 rounded"></div>
-                                <div class="flex-1">
-                                    <h4 class="font-semibold text-mainblue text-sm">የፌዴራል ዋና ኦዲተር መሥሪያ ቤትና የክልል...</h4>
-                                    <div class="text-xs text-gray-500">dd/mm/yyyy | Author</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+        <!-- Recent Posts Container -->
+        <div id="recentPosts" class="space-y-4">
+            <!-- Posts will be dynamically inserted here -->
+        </div>
+    </div>
+</aside>
+
+<!-- Date Picker Modal (hidden by default) -->
+<div id="datePickerModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white p-6 rounded-lg w-full max-w-md">
+        <h3 class="text-lg font-semibold mb-4">Select Date Range</h3>
+        <div class="flex flex-col space-y-4">
+            <div class="flex items-center space-x-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">From</label>
+                    <input type="date" id="dateFrom" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-mainblue focus:border-mainblue">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">To</label>
+                    <input type="date" id="dateTo" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-mainblue focus:border-mainblue">
+                </div>
+            </div>
+            <div class="flex justify-end space-x-3">
+                <button id="cancelDateBtn" type="button" class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    Cancel
+                </button>
+                <button id="applyDateBtn" type="button" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-mainblue hover:bg-blue-700">
+                    Apply
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sort Options Dropdown (hidden by default) -->
+<div id="sortDropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 hidden">
+    <div class="py-1">
+        <a href="#" class="sort-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-sort="newest">Newest First</a>
+        <a href="#" class="sort-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-sort="oldest">Oldest First</a>
+        <a href="#" class="sort-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-sort="title-asc">Title (A-Z)</a>
+        <a href="#" class="sort-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-sort="title-desc">Title (Z-A)</a>
+    </div>
+</div>
+
+<script>
+    // Sample post data (replace with your actual data from API)
+    const samplePosts = [
+        {
+            id: 1,
+            title: "የፌዴራል ዋና ኦዲተር መሥሪያ ቤትና የክልል አስተዳደር ስራ",
+            date: "2024-01-15",
+            author: "Admin",
+            image: "https://via.placeholder.com/80x64"
+        },
+        {
+            id: 2,
+            title: "የፌዴራል ኦዲት የመጀመሪያ ምድብ ስራ",
+            date: "2024-01-10",
+            author: "Editor",
+            image: "https://via.placeholder.com/80x64"
+        },
+        {
+            id: 3,
+            title: "የስራ አፈጻጸም ኦዲት ሪፖርት",
+            date: "2024-01-05",
+            author: "Reporter",
+            image: "https://via.placeholder.com/80x64"
+        },
+        {
+            id: 4,
+            title: "የኢት ኦዲት ስራዎች እና የቴክኖሎጂ አጠቃቀም",
+            date: "2023-12-28",
+            author: "IT Team",
+            image: "https://via.placeholder.com/80x64"
+        }
+    ];
+
+    // DOM Elements
+    const recentPostsContainer = document.getElementById('recentPosts');
+    const searchInput = document.getElementById('searchInput');
+    const dateFilterBtn = document.getElementById('dateFilterBtn');
+    const dateRangeText = document.getElementById('dateRangeText');
+    const sortBtn = document.getElementById('sortBtn');
+    const datePickerModal = document.getElementById('datePickerModal');
+    const dateFrom = document.getElementById('dateFrom');
+    const dateTo = document.getElementById('dateTo');
+    const applyDateBtn = document.getElementById('applyDateBtn');
+    const cancelDateBtn = document.getElementById('cancelDateBtn');
+    const sortDropdown = document.getElementById('sortDropdown');
+
+    // Current filter state
+    let currentFilter = {
+        searchTerm: '',
+        dateFrom: '2024-01-06',
+        dateTo: '2024-01-15',
+        sortBy: 'newest'
+    };
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        renderPosts();
+        setupEventListeners();
+    });
+
+    // Set up event listeners
+    function setupEventListeners() {
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            currentFilter.searchTerm = e.target.value.toLowerCase();
+            renderPosts();
+        });
+
+        // Date filter button
+        dateFilterBtn.addEventListener('click', () => {
+            datePickerModal.classList.remove('hidden');
+            dateFrom.value = currentFilter.dateFrom;
+            dateTo.value = currentFilter.dateTo;
+        });
+
+        // Date picker buttons
+        applyDateBtn.addEventListener('click', applyDateFilter);
+        cancelDateBtn.addEventListener('click', () => {
+            datePickerModal.classList.add('hidden');
+        });
+
+        // Sort button
+        sortBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sortDropdown.classList.toggle('hidden');
+        });
+
+        // Sort options
+        document.querySelectorAll('.sort-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentFilter.sortBy = e.target.dataset.sort;
+                sortDropdown.classList.add('hidden');
+                renderPosts();
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sortBtn.contains(e.target) && !sortDropdown.contains(e.target)) {
+                sortDropdown.classList.add('hidden');
+            }
+            if (!datePickerModal.contains(e.target) && !dateFilterBtn.contains(e.target) && !datePickerModal.classList.contains('hidden')) {
+                datePickerModal.classList.add('hidden');
+            }
+        });
+    }
+
+    // Apply date filter
+    function applyDateFilter() {
+        currentFilter.dateFrom = dateFrom.value;
+        currentFilter.dateTo = dateTo.value;
+        dateRangeText.textContent = `${formatDate(dateFrom.value)} - ${formatDate(dateTo.value)}`;
+        datePickerModal.classList.add('hidden');
+        renderPosts();
+    }
+
+    // Format date for display
+    function formatDate(dateString) {
+        const options = { month: 'short', day: 'numeric', year: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+    }
+
+    // Filter and sort posts
+    function getFilteredPosts() {
+        let filtered = [...samplePosts];
+        
+        // Apply search filter
+        if (currentFilter.searchTerm) {
+            filtered = filtered.filter(post => 
+                post.title.toLowerCase().includes(currentFilter.searchTerm) ||
+                post.author.toLowerCase().includes(currentFilter.searchTerm)
+            );
+        }
+        
+        // Apply date filter
+        filtered = filtered.filter(post => {
+            const postDate = new Date(post.date);
+            const fromDate = new Date(currentFilter.dateFrom);
+            const toDate = new Date(currentFilter.dateTo);
+            return postDate >= fromDate && postDate <= toDate;
+        });
+        
+        // Apply sorting
+        switch (currentFilter.sortBy) {
+            case 'newest':
+                filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+                break;
+            case 'oldest':
+                filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+                break;
+            case 'title-asc':
+                filtered.sort((a, b) => a.title.localeCompare(b.title));
+                break;
+            case 'title-desc':
+                filtered.sort((a, b) => b.title.localeCompare(a.title));
+                break;
+        }
+        
+        return filtered;
+    }
+
+    // Render posts based on current filters
+    function renderPosts() {
+        const posts = getFilteredPosts();
+        recentPostsContainer.innerHTML = '';
+        
+        if (posts.length === 0) {
+            recentPostsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">No posts found matching your criteria</p>';
+            return;
+        }
+        
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'flex items-start space-x-4 hover:bg-gray-50 p-2 rounded transition-colors';
+            postElement.innerHTML = `
+                <div class="w-20 h-16 bg-gray-200 rounded overflow-hidden">
+                                                    <div class="w-20 h-16 bg-gray-200 rounded"></div>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-semibold text-mainblue text-sm hover:underline cursor-pointer">${post.title}</h4>
+                    <div class="text-xs text-gray-500">${formatDate(post.date)} | ${post.author}</div>
+                </div>
+            `;
+            recentPostsContainer.appendChild(postElement);
+        });
+    }
+</script>
             </div>
         </div>
     </main>

@@ -307,30 +307,69 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Retail Auditors -->
                 <div class="text-center">
-                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">325</div>
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="325">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Retail Auditors</div>
                 </div>
                 
                 <!-- Performance Auditors -->
                 <div class="text-center">
-                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">75</div>
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="75">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Performance<br>Auditors</div>
                 </div>
                 
                 <!-- IT Auditors -->
                 <div class="text-center">
-                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">3</div>
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="3">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">IT Auditors</div>
                 </div>
                 
                 <!-- Total Employees -->
                 <div class="text-center">
-                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2">610</div>
+                    <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="610">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">OFAG Total<br>Employees</div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('[data-count]');
+            const speed = 900; // The lower the faster
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-count');
+                        const count = +counter.innerText;
+                        const increment = target / speed;
+                        
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            const updateCount = () => {
+                                const count = +counter.innerText;
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + increment);
+                                    setTimeout(updateCount, 1);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        } else {
+                            counter.innerText = target;
+                        }
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 }); // Start when 50% of element is visible
+            
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+    </script>
 
     <!-- Legislations Section -->
     <section class="bg-white py-16">
