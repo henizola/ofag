@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .faq-item .answer {
+        display: none;
+      }
+      .faq-item.active .answer {
+        display: block;
+      }
+      .faq-item.active .plus-icon {
+        display: none;
+      }
+      .faq-item:not(.active) .minus-icon {
+        display: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white border-b">
+      <div class="relative" style="height: 160px">
+        <div class="relative flex items-center justify-center h-full">
+          <!-- Back Button on the Left -->
+          <div
+            class="absolute left-8 top-1/2 -translate-y-1/2 flex items-center space-x-2 rounded-[8px] p-3 cursor-pointer"
+          >
+            <a
+              href="javascript:history.back()"
+              class="text-[#2c4067] hover:text-blue-700 transition-colors"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Centered Logo -->
+          <div class="flex items-center space-x-4">
+            <img
+              src="./assets/header logo.png"
+              alt="OFAG Logo"
+              class="h-full w-auto object-contain"
+            />
+          </div>
+
+          <!-- Hamburger Menu Button on the Right -->
+          <div
+            id="menu-button"
+            class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2 border border-gray-300 bg-white rounded-[8px] p-3 cursor-pointer"
+          >
+            <button
+              onclick="toggleMenu(event)"
+              class="flex flex-col justify-between w-6 h-5 text-[#1E3A8A]"
+            >
+              <span class="block h-0.5 bg-current"></span>
+              <span class="block h-0.5 bg-current"></span>
+              <span class="block h-0.5 bg-current"></span>
+            </button>
+          </div>
+
+          <!-- Dropdown Menu List -->
+          <div
+            id="menu"
+            class="hidden absolute right-8 top-[120px] bg-white border border-gray-300 rounded-[8px] p-4 shadow-lg w-64 z-50"
+          >
+            <h2 class="text-[#1E3A8A] font-bold text-lg mb-3">Menu</h2>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">ART Portal</a></li>
+              <li><a href="#" class="hover:underline">Helpdesk MS</a></li>
+              <li>
+                <a href="#" class="hover:underline">Application Portal</a>
+              </li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+
+      <section class="mt-32 lg:px-32 px-5">
+        <h1
+          class="text-2xl md:text-3xl font-[400] text-mainblue text-start mb-12"
+        >
+          Welcome to the OFAG Application Portal
+        </h1>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">OFAG Website</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">Corporate Email</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              Human Resources Management
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              Record Management Information System
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">OFAG Website</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">Corporate Email</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              Human Resources Management
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              Record Management Information System
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-9 mb-32 lg:px-32 px-5">
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">OFAG Website</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">Corporate Email</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              Human Resources Management
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-mainblue pt-32 pb-10 mt-[-40px]">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 gap-10">
+          <!-- Left: Logo -->
+          <div class="flex">
+            <div class="flex items-center mb-4">
+              <img
+                src="./assets/footer-logo.png"
+                alt="OFAG Logo"
+                class="w-auto mr-3"
+              />
+            </div>
+          </div>
+          <!-- Right: Company -->
+          <div class="flex text-start ml-10">
+            <!-- <div class="footer-link-header text-white font-bold mb-3">Company</div> -->
+            <div class="text-white opacity-70 space-y-6 text-sm font-[400]">
+              <div>
+                <h1>Office of the Federal Auditor General (OFAG)</h1>
+                <h1>Africa Avenue, Flamingo Area, Addis Ababa, P.O.Box: 457</h1>
+              </div>
+              <div>
+                <h1>
+                  <a href="team.html" class="footer-link hover:underline"
+                    >info@ofag.gov.et</a
+                  >
+                </h1>
+                <h1>+251 115181250 / +251 115 575701/ +251 115574468</h1>
+              </div>
+              <h1>
+                <a href="report.html" class="footer-link hover:underline"
+                  >www.ofag.gov.et</a
+                >
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70"
+        >
+          &copy; 2024 Office of the Federal Auditor General. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll(".faq-item .question").forEach((question) => {
+        question.addEventListener("click", (e) => {
+          const faqItem = question.closest(".faq-item");
+
+          // If this is a main category accordion on the left
+          if (faqItem.parentElement.classList.contains("w-full")) {
+            // Deactivate other main categories
+            document
+              .querySelectorAll(
+                ".w-full.md\\:w-2\\/3 > .space-y-4 > .faq-item.active"
+              )
+              .forEach((activeItem) => {
+                if (activeItem !== faqItem) {
+                  activeItem.classList.remove("active");
+                }
+              });
+          }
+
+          faqItem.classList.toggle("active");
+
+          // Stop the click from bubbling up to parent faq-items
+          e.stopPropagation();
+        });
+      });
+    </script>
+    <script>
+      const menu = document.getElementById("menu");
+      const menuButton = document.getElementById("menu-button");
+
+      function toggleMenu(event) {
+        event.stopPropagation(); // prevent click from bubbling to document
+        menu.classList.toggle("hidden");
+      }
+
+      document.addEventListener("click", function (event) {
+        if (
+          !menu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
