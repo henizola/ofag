@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="am">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>የአይቲ እገዛ ዴስክ አስተዳደር ስርዓት - ይግቡ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans">
+    <header
+      class="fixed top-0 left-0 right-0 flex justify-between items-center p-6 bg-transparent z-10"
+    >
+      <a
+        href="javascript:history.back()"
+        class="text-[#2c4067] hover:text-blue-700 transition-colors"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          ></path>
+        </svg>
+      </a>
+      <!-- <button class="text-white bg-[#2c4067] p-2 rounded-md md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button> -->
+      <div
+        id="menu-button"
+        class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2 border border-gray-300 bg-white rounded-[8px] p-3 cursor-pointer"
+      >
+        <button
+          onclick="toggleMenu(event)"
+          class="flex flex-col justify-between w-6 h-5 text-[#1E3A8A]"
+        >
+          <span class="block h-0.5 bg-current"></span>
+          <span class="block h-0.5 bg-current"></span>
+          <span class="block h-0.5 bg-current"></span>
+        </button>
+      </div>
+
+      <!-- Dropdown Menu List -->
+      <div
+        id="menu"
+        class="hidden absolute right-8 top-[120px] bg-white border border-gray-300 rounded-[8px] p-4 shadow-lg w-64 z-50"
+      >
+        <h2 class="text-[#1E3A8A] font-bold text-lg mb-3">ምናሌ</h2>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><a href="#" class="hover:underline">ዋና ገጽ</a></li>
+          <li><a href="#" class="hover:underline">ART ፖርታል</a></li>
+          <li><a href="#" class="hover:underline">የእገዛ ዴስክ አስተዳደር ስርዓት</a></li>
+          <li><a href="#" class="hover:underline">የትግበራ ፖርታል</a></li>
+          <li><a href="#" class="hover:underline">እኛን ያነጋግሩን</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="flex items-center justify-center min-h-screen">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto p-8 md:p-12"
+      >
+        <!-- Left Side: Logo and Title -->
+        <div
+          class="w-full md:w-1/2 flex flex-col items-center justify-center text-center p-8"
+        >
+          <img
+            src="./assets/ofag_logo1-01 1.png"
+            alt="OFAG Logo"
+            class="w-full h-auto mb-6"
+          />
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div
+          class="w-full md:w-1/2 flex flex-col items-start justify-center p-8 md:pl-16"
+        >
+          <div class="w-full max-w-md">
+            <div class="text-left mb-8">
+              <h1 class="text-4xl font-bold text-[#2c4067]">
+                የአይቲ እገዛ ዴስክ አስተዳደር ስርዓት
+              </h1>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-2xl font-semibold text-[#2c4067]">
+                እባክዎ ይግቡ
+              </h2>
+            </div>
+
+            <form>
+              <div class="mb-4">
+                <label
+                  for="username"
+                  class="block text-[#2c4067] font-medium mb-2"
+                  >የተጠቃሚ ስም</label
+                >
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="የተጠቃሚ ስምዎን ያስገቡ"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c4067] transition-shadow shadow-sm hover:shadow-md"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="password"
+                  class="block text-[#2c4067] font-medium mb-2"
+                  >የይለፍ ቃል</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="••••••••"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c4067] transition-shadow shadow-sm hover:shadow-md"
+                />
+              </div>
+              <div class="mb-6 text-left">
+                <a href="#" class="text-sm text-[#2c4067] hover:underline"
+                  >የተጠቃሚ ስምዎን እና/ወይም የይለፍ ቃልዎን ከረሱ የስርዓት አስተዳዳሪውን ያነጋግሩ።</a
+                >
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-[#2c4067] text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition-colors shadow-md hover:shadow-lg"
+              >
+                ይግቡ
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menu = document.getElementById("menu");
+      const menuButton = document.getElementById("menu-button");
+
+      function toggleMenu(event) {
+        event.stopPropagation(); // prevent click from bubbling to document
+        menu.classList.toggle("hidden");
+      }
+
+      document.addEventListener("click", function (event) {
+        if (
+          !menu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

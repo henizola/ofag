@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="am">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ተደጋጋሚ ጥያቄዎች - ኦፌዴ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .faq-item .answer {
+        display: none;
+      }
+      .faq-item.active .answer {
+        display: block;
+      }
+      .faq-item.active .plus-icon {
+        display: none;
+      }
+      .faq-item:not(.active) .minus-icon {
+        display: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white border-b">
+      <div class="relative" style="height: 160px">
+        <div class="relative flex items-center justify-center h-full">
+          <!-- Back Button on the Left -->
+          <div
+            class="absolute left-8 top-1/2 -translate-y-1/2 flex items-center space-x-2 rounded-[8px] p-3 cursor-pointer"
+          >
+            <a
+              href="javascript:history.back()"
+              class="text-[#2c4067] hover:text-blue-700 transition-colors"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Centered Logo -->
+          <div class="flex items-center space-x-4">
+            <img
+              src="./assets/header logo.png"
+              alt="OFAG Logo"
+              class="h-full w-auto object-contain"
+            />
+          </div>
+
+          <!-- Hamburger Menu Button on the Right -->
+          <div
+            id="menu-button"
+            class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-2 border border-gray-300 bg-white rounded-[8px] p-3 cursor-pointer"
+          >
+            <button
+              onclick="toggleMenu(event)"
+              class="flex flex-col justify-between w-6 h-5 text-[#1E3A8A]"
+            >
+              <span class="block h-0.5 bg-current"></span>
+              <span class="block h-0.5 bg-current"></span>
+              <span class="block h-0.5 bg-current"></span>
+            </button>
+          </div>
+
+          <!-- Dropdown Menu List -->
+          <div
+            id="menu"
+            class="hidden absolute right-8 top-[120px] bg-white border border-gray-300 rounded-[8px] p-4 shadow-lg w-64 z-50"
+          >
+            <h2 class="text-[#1E3A8A] font-bold text-lg mb-3">ምናሌ</h2>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><a href="#" class="hover:underline">ዋና ገጽ</a></li>
+              <li><a href="#" class="hover:underline">ART ፖርታል</a></li>
+              <li><a href="#" class="hover:underline">የእገዛ ዴስክ ኤምኤስ</a></li>
+              <li>
+                <a href="#" class="hover:underline">የትግበራ ፖርታል</a>
+              </li>
+              <li><a href="#" class="hover:underline">እኛን ያነጋግሩን</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+
+      <section class="mt-32 lg:px-32 px-5">
+        <h1
+          class="text-2xl md:text-3xl font-[400] text-mainblue text-start mb-12"
+        >
+          ወደ ኦፌዴ የትግበራ ፖርታል እንኳን በደህና መጡ
+        </h1>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኦፌዴ ድር ጣቢያ</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኮርፖሬት ኢሜይል</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              የሰው ሀብት አስተዳደር
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              የመዝገብ አስተዳደር መረጃ ስርዓት
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኦፌዴ ድር ጣቢያ</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኮርፖሬት ኢሜይል</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              የሰው ሀብት አስተዳደር
+            </h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              የመዝገብ አስተዳደር መረጃ ስርዓት
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-9 mb-32 lg:px-32 px-5">
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኦፌዴ ድር ጣቢያ</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">የኮርፖሬት ኢሜይል</h2>
+          </div>
+          <!-- Card -->
+          <div class="space-y-6">
+            <div class="bg-[#D9D9D9] w-full h-[415px]"></div>
+            <h2 class="text-lg font-[400] text-mainblue">
+              የሰው ሀብት አስተዳደር
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-mainblue pt-24 pb-10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between gap-12">
+          <!-- Left: Logo and Info -->
+          <div class="flex-1 min-w-[220px]">
+            <div class="flex items-center mb-4">
+              <img src="./assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+            </div>
+            <div class="space-y-3 text-white text-sm">
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 mt-1 flex-shrink-0">
+                  <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg>
+                <div>የፌዴራል ዋና ኦዲተር መሥሪያ ቤት (OFAG)<br> አፍሪካ ጎዳና፣ ፍላሚንጎ አካባቢ፣<br> አዲስ አበባ፣ ፖ.ሳ.ቁ፡ 457</div>
+              </div>
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 flex-shrink-0">
+                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                <div>info@ofag.gov.et</div>
+              </div>
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 flex-shrink-0">
+                  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.279-.087.431l3.203 4.805c.078.116.25.144.385.068l1.293-.97a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 7.75V5.5a3 3 0 010-1z" clip-rule="evenodd" />
+                </svg>
+                <div>+251 115181250 / +251 115 575701</div>
+              </div>
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-3 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                <div>www.ofag.gov.et</div>
+              </div>
+            </div>
+            <div class="flex space-x-3 mt-4">
+              <a href="mailto:info@ofag.gov.et"><img src="./assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+              <a href="https://t.me/OFAGETHIOPIA"><img src="./assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+              <a href="https://www.youtube.com/@OFAGETHIOPIA"><img src="./assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+              <a href="https://www.facebook.com/OFAGETHIOPIA"><img src="./assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+              <a href="https://www.instagram.com/OFAGETHIOPIA"><img src="./assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+              <a href="https://www.linkedin.com/company/ofag-ethiopia/"><img src="./assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+              <a href="https://x.com/OFAGETHIOPIA"><img src="./assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+            </div>
+          </div>
+          <!-- Middle: Navigation -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">ገጾች</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="index.html" class="footer-link hover:underline">ዋና ገጽ</a></li>
+              <li><a href="about.html" class="footer-link hover:underline">ስለ እኛ</a></li>
+              <li><a href="news.html" class="footer-link hover:underline">የመገናኛ ብዙኃን ማዕከል</a></li>
+              <li><a href="legislations.html" class="footer-link hover:underline">ህትመቶች</a></li>
+              <li><a href="announcements.html" class="footer-link hover:underline">ማስታወቂያዎች</a></li>
+              <li><a href="audit-reports.html" class="footer-link hover:underline">የኦዲት ሪፖርቶች</a></li>
+              <li><a href="portal.html" class="footer-link hover:underline">የኦፌዴን ፖርታል</a></li>
+              <li><a href="contact.html" class="footer-link hover:underline">እኛን ያነጋግሩን</a></li>
+            </ul>
+          </div>
+          <!-- Middle: Explore -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">ያስሱ</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="services.html" class="footer-link hover:underline">አገልግሎቶቻችን</a></li>
+              <li><a href="news.html" class="footer-link hover:underline">ዜና እና ታሪኮች</a></li>
+              <li><a href="#" class="footer-link hover:underline">ጋዜጣዎች</a></li>
+              <li><a href="legislations.html" class="footer-link hover:underline">መመሪያዎች እና መመሪያዎች</a></li>
+              <li><a href="faq.html" class="footer-link hover:underline">ተደጋጋሚ ጥያቄዎች</a></li>
+            </ul>
+          </div>
+          <!-- Right: Company -->
+          <div class="flex-1 min-w-[180px]">
+            <div class="footer-link-header text-white font-bold mb-3">ድርጅት</div>
+            <ul class="text-white space-y-1 text-sm">
+              <li><a href="#" class="footer-link hover:underline">ክስተቶች</a></li>
+              <li><a href="announcements.html" class="footer-link hover:underline">ክፍት የሥራ ቦታዎች እና ጨረታዎች</a></li>
+              <li><a href="team.html" class="footer-link hover:underline">ቡድኑን ያግኙ</a></li>
+              <li><a href="alumni.html" class="footer-link hover:underline">የኦፌዴ የቀድሞ ተማሪዎች</a></li>
+              <li><a href="report.html" class="footer-link hover:underline">አስተያየት</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
+          &copy; 2024 የፌዴራል ዋና ኦዲተር ጽህፈት ቤት። መብቱ በህግ የተጠበቀ ነው.
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll(".faq-item .question").forEach((question) => {
+        question.addEventListener("click", (e) => {
+          const faqItem = question.closest(".faq-item");
+
+          // If this is a main category accordion on the left
+          if (faqItem.parentElement.classList.contains("w-full")) {
+            // Deactivate other main categories
+            document
+              .querySelectorAll(
+                ".w-full.md\\:w-2\\/3 > .space-y-4 > .faq-item.active"
+              )
+              .forEach((activeItem) => {
+                if (activeItem !== faqItem) {
+                  activeItem.classList.remove("active");
+                }
+              });
+          }
+
+          faqItem.classList.toggle("active");
+
+          // Stop the click from bubbling up to parent faq-items
+          e.stopPropagation();
+        });
+      });
+    </script>
+    <script>
+      const menu = document.getElementById("menu");
+      const menuButton = document.getElementById("menu-button");
+
+      function toggleMenu(event) {
+        event.stopPropagation(); // prevent click from bubbling to document
+        menu.classList.toggle("hidden");
+      }
+
+      document.addEventListener("click", function (event) {
+        if (
+          !menu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
