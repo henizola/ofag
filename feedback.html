@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - OFAG</title>
+    <title>Feedback - OFAG</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -16,19 +17,8 @@
             }
         }
     </script>
- <script>
-      tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      mainblue: '#2c4067',
-                  }
-              }
-          }
-      }
-  </script>
 </head>
-<body class="font-sans bg-white">
+<body class="font-sans bg-gray-50">
     <!-- Header and Navigation Bar -->
     <header class="bg-white border-b">
         <div class="relative z-20" style="height: 60px;">
@@ -60,12 +50,12 @@
                 <div class="flex items-center space-x-2">
                    EN
                   <span class="text-gray-400">|</span>
-                  <a href="./am/team.html" class="text-[#2c4067] font-medium text-base"><span class="text-[#2c4067] font-bold text-base">አማ</span></a>
+                  <a href="./am/feedback.html" class="text-[#2c4067] font-medium text-base"><span class="text-[#2c4067] font-bold text-base">አማ</span></a>
                 </div>
             </div>
         </div>
         <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
-            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+             <div class="container mx-auto px-4 h-full flex items-center justify-center">
                 <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
                     <li><a href="index.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Home</a></li>
                     <li class="relative group">
@@ -91,13 +81,8 @@
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            Services
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">Services <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Services Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -107,18 +92,15 @@
                                     <div><a href="services.html#faqs" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">FAQs</h3></a></div>
                                     <div><a href="services.html#service-feedback" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Service Feedback</h3></a></div>
                                 </div>
-                                <div class="mt-6 pt-4 border-t"><a href="services.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Services<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-6 pt-4 border-t">
+                                    <a href="services.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Services <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            Media Center
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">Media Center <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Media Center Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -129,18 +111,15 @@
                                     <div><a href="newsletter.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Newsletter Archive</h3></a></div>
                                     <div><a href="announcements.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Event Highlights</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="news.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">News & Media<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="news.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">News & Media <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            Announcements
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">Announcements <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Announcements Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -149,18 +128,15 @@
                                     <div><a href="announcements.html#vacancies" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Vacancies</h3></a></div>
                                     <div><a href="announcements.html#bids" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Bids</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="announcements.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Announcements<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="announcements.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Announcements <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="publications.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            Publications
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="publications.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">Publications <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Publications Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -171,19 +147,16 @@
                                     <div><a href="publications.html#manuals-guidelines" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Manuals And Guidelines</h3></a></div>
                                     <div><a href="publications.html#annual-reports" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Annual Performance and Financial Reports</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="publications.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Publications<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="publications.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Publications <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
                     <li class="relative group">
-                        <a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            Portal
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">Portal <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Portal Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -191,7 +164,9 @@
                                     <div><a href="portal-help.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Helpdesk Management System</h3></a></div>
                                     <div><a href="apk-portal.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Applications Portal</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="portal.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Portal <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="portal.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">Portal <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -228,147 +203,65 @@
             </div>
         </nav>
     </header>
-    <!-- End Header and Navigation Bar -->
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Hero/Banner Section -->
-        <section class="relative h-[80vh] mb-[200px]">
-            <!-- Background image -->
-            <img src="./assets/banners/team.png" alt="OFAG Team" class="w-full h-[80vh] object-cover" />
-            
-            <!-- Content overlay -->
-            <div class="absolute -bottom-[30%] left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                <div class="bg-white bg-opacity-95 rounded-lg p-12 max-w-4xl mx-4 shadow-lg">
-                    <h1 class="text-mainblue text-[48px] md:text-[56px] font-bold mb-6">Meet the team</h1>
-                    <div class="space-y-6 text-gray-600 text-[16px] lg:text-[18px] leading-relaxed">
-                        <p>
-                            At the Office of the Federal Auditor General of Ethiopia, our management team is dedicated to ensuring transparency, accountability, and the efficient use of public resources.
-                        </p>
-                        
-                        <p>
-                            Comprising experienced professionals with a deep commitment to good governance, our managers guide the institution in delivering reliable audit services that foster trust and integrity.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Leadership Profiles Section -->
-        <section class="bg-[#F4F6F7] py-16 mt-[300px]">
-            <div class="container mx-auto px-4 max-w-7xl">
-                <div class="space-y-20">
-                    <!-- H.E Meseret Damte -->
-                    <div class="flex flex-col lg:flex-row items-start gap-12">
-                        <!-- Photo -->
-                        <div class="flex-1">
-                            <img src="./assets/team/meseret-damte.png" alt="H.E Meseret Damte" class="w-full  rounded-lg shadow-lg object-cover" />
-                        </div>
-                        <!-- Content -->
-                        <div class="flex-1">
-                            <h3 class="text-mainblue text-[28px] font-bold mb-2">H.E Meseret Damte</h3>
-                            <p class="text-mainblue text-[18px] font-medium mb-6">Auditor General</p>
-                            <p class="text-gray-600 text-[16px] leading-relaxed mb-8">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisl nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
-                            </p>
-                            <!-- Social Media Icons -->
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
-                                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- H.E Abera Tadesse -->
-                    <div class="flex flex-col lg:flex-row items-start gap-12">
-                        <!-- Content (Left side for desktop) -->
-                        <div class="flex-1 order-2 lg:order-1">
-                            <h3 class="text-mainblue text-right text-[28px] font-bold mb-2">H.E Abera Tadesse</h3>
-                            <p class="text-mainblue text-[18px]  text-right font-medium mb-6">Deputy Auditor General - Audit Operation</p>
-                            <p class="text-gray-600 text-[16px]  text-right leading-relaxed mb-8">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis. Morbi sed varius est. Ut id porttitor turpis. Nam bibendum ultricies dui at fermentum. Fusce ornare aliquam dolor at facilisis. Vivamus nisl nisl, laoreet in orci eget, pulvinar sodales turpis. In a pharetra massa. Vivamus purus metus, rhoncus at finibus ut, viverra quis ex. Vivamus pulvinar euismod elit ut interdum.
-                            </p>
-                            <!-- Social Media Icons -->
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-mainblue transition">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
-                                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Photo (Right side for desktop) -->
-                        <div class="flex-1 order-1 lg:order-2">
-                            <img src="./assets/team/abera-tadesse.png" alt="H.E Abera Tadesse" class="w-full  rounded-lg shadow-lg object-cover ml-auto" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Board of Directors Section -->
-        <section class="bg-white py-16">
-            <div class="container mx-auto px-4 max-w-7xl">
-                <!-- Section Title -->
-                <h2 class="text-mainblue text-[36px] font-bold text-center mb-12">Board of Directors</h2>
+    <main class="py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold text-mainblue mb-4">Submit Feedback</h1>
+                <p class="text-gray-600 mb-8">Please use the form below to send us your queries, complaints, or to report any suspected fraud or corruption. Your feedback is confidential and important to us.</p>
                 
-                <!-- Directors Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="bg-gray-300 w-full h-48 rounded-lg mb-4"></div>
-                        <h4 class="text-mainblue text-[16px] font-semibold mb-1">Aweke Tenaw</h4>
-                        <p class="text-mainblue text-[14px] font-light mb-2">Head of the Auditor General Office</p>
-                        <p class="text-mainblue text-[12px] font-light mb-3">📞 +251 115118526</p>
-                        <div class="flex justify-center space-x-2">
-                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                            <a href="#" class="text-mainblue hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg></a>
+                <form id="feedback-form" class="space-y-6">
+                    <div>
+                        <label for="feedback-type" class="block text-sm font-medium text-gray-700 mb-1">Type of Feedback</label>
+                        <select id="feedback-type" name="feedback-type" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue">
+                            <option value="query">General Query</option>
+                            <option value="fraud">Report Fraud/Corruption</option>
+                            <option value="complaint">Complaint</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="you@example.com">
                         </div>
                     </div>
-                </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="+251 91 123 4567">
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="Subject of your message">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="Please provide as much detail as possible."></textarea>
+                    </div>
+
+                    <div id="file-upload-container" class="hidden">
+                        <label for="file-upload" class="block text-sm font-medium text-gray-700 mb-1">Attach Evidence (Optional)</label>
+                        <p class="text-xs text-gray-500 mb-2">You can upload documents, images, or other files to support your report. Max file size: 10MB.</p>
+                        <input type="file" id="file-upload" name="file-upload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-mainblue hover:file:bg-blue-100">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full bg-mainblue text-white font-bold py-3 rounded-md hover:bg-opacity-90 transition-colors shadow-md hover:shadow-lg">Submit Feedback</button>
+                    </div>
+                </form>
             </div>
-        </section>
-      <!-- Audit For The Benefit Of Citizens Section -->
-      <section class="bg-[#f6f8f9] rounded-2xl  mx-4 pb-10 md:mx-0">
-        <div class="container mx-auto px-8 py-16 flex flex-col md:flex-row items-center justify-between max-w-7xl">
-          <div class="mb-8 md:mb-0">
-            <h2 class="text-mainblue text-3xl md:text-4xl font-thin mb-6">Audit For The Benefit Of Citizens!</h2>
-            <p class="text-mainblue text-xl md:text-2xl font-thin max-w-xl">Discover more about the Office of the Federal Auditor General (OFAG)</p>
-          </div>
-          <a href="about.html" class="bg-mainblue text-white text-xl px-12 py-6 rounded-md font-normal hover:bg-[#1e2d47] transition">About Us</a>
         </div>
-      </section>
-  
- 
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-mainblue pt-24 pb-10">
+    <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row md:justify-between gap-12">
                 <!-- Left: Logo and Info -->
@@ -420,10 +313,10 @@
                         <li><a href="index.html" class="footer-link hover:underline">Home</a></li>
                         <li><a href="about.html" class="footer-link hover:underline">About Us</a></li>
                         <li><a href="news.html" class="footer-link hover:underline">Media Center</a></li>
-                        <li><a href="#" class="footer-link hover:underline">Publications</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">Publications</a></li>
                         <li><a href="announcements.html" class="footer-link hover:underline">Announcements</a></li>
                         <li><a href="audit-reports.html" class="footer-link hover:underline">Audit Reports</a></li>
-                        <li><a href="#" class="footer-link hover:underline">OFAG Portal</a></li>
+                        <li><a href="portal.html" class="footer-link hover:underline">OFAG Portal</a></li>
                         <li><a href="contact.html" class="footer-link hover:underline">Contact Us</a></li>
                     </ul>
                 </div>
@@ -455,7 +348,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html> 

@@ -69,4 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
             searchBar.classList.add('hidden');
         }
     });
+
+    // Feedback form logic
+    const feedbackForm = document.getElementById('feedback-form');
+    if (feedbackForm) {
+        const feedbackType = document.getElementById('feedback-type');
+        const fileUploadContainer = document.getElementById('file-upload-container');
+
+        feedbackType.addEventListener('change', () => {
+            if (feedbackType.value === 'fraud') {
+                fileUploadContainer.classList.remove('hidden');
+            } else {
+                fileUploadContainer.classList.add('hidden');
+            }
+        });
+    }
 }); 

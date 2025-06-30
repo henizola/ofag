@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ኦፌዴ - አገልግሎቶች</title>
+    <title>አስተያየት - ኦፌዴ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
- <script>
-      tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      mainblue: '#2c4067',
-                  }
-              }
-          }
-      }
-  </script>
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainblue: '#2c4067',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-white">
-    <!-- Header and Navigation Bar (Duplicated from About Page) -->
+<body class="font-sans bg-gray-50">
+    <!-- Header and Navigation Bar -->
     <header class="bg-white border-b">
-        <!-- Patterned background -->
-        <div class="relative z-20" style="height: 60px;">
+        <div class="relative z-20" style="height: 160px;">
             <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('../assets/header pattern.png');"></div>
             
             <!-- Centered Logo -->
             <div class="flex items-center justify-center h-full">
                 <a href="index.html">
-                    <img src="../assets/header logo.png" alt="OFAG Logo" class="h-12">
+                    <img src="../assets/header logo.png" alt="OFAG Logo" class="h-24">
                 </a>
             </div>
 
@@ -49,15 +48,14 @@
 
                 <!-- Language Switcher -->
                 <div class="flex items-center space-x-2">
-                   <a href="../services.html" class="text-[#2c4067] font-medium text-base">EN</a>
+                   <a href="../feedback.html" class="text-[#2c4067] font-medium text-base">EN</a>
                   <span class="text-gray-400">|</span>
                   <span class="text-[#2c4067] font-bold text-base">አማ</span>
                 </div>
             </div>
         </div>
-        <!-- Navigation Bar -->
         <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
-            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+             <div class="container mx-auto px-4 h-full flex items-center justify-center">
                 <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
                     <li><a href="index.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">ዋና ገጽ</a></li>
                     <li class="relative group">
@@ -83,13 +81,8 @@
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="services.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1 flex items-center">
-                            አገልግሎቶች
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">አገልግሎቶች <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Services Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -99,18 +92,15 @@
                                     <div><a href="services.html#faqs" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">ተደጋጋሚ ጥያቄዎች</h3></a></div>
                                     <div><a href="services.html#service-feedback" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">የአገልግሎት አስተያየት</h3></a></div>
                                 </div>
-                                <div class="mt-6 pt-4 border-t"><a href="services.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">አገልግሎቶች<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-6 pt-4 border-t">
+                                    <a href="services.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">አገልግሎቶች <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            የመገናኛ ብዙኃን ማዕከል
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">የመገናኛ ብዙኃን ማዕከል <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Media Center Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -121,18 +111,15 @@
                                     <div><a href="newsletter.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">የጋዜጣ መዝገብ</h3></a></div>
                                     <div><a href="announcements.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">የክስተት ዋና ዋና ዜናዎች</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="news.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ዜና እና ሚዲያ<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="news.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ዜና እና ሚዲያ <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            ማስታወቂያዎች
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">ማስታወቂያዎች <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Announcements Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -141,18 +128,15 @@
                                     <div><a href="announcements.html#vacancies" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">ክፍት የሥራ ቦታዎች</h3></a></div>
                                     <div><a href="announcements.html#bids" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">ጨረታዎች</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="announcements.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ማስታወቂያዎች<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="announcements.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ማስታወቂያዎች <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="publications.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            ህትመቶች
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="publications.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">ህትመቶች <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Publications Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -163,19 +147,16 @@
                                     <div><a href="publications.html#manuals-guidelines" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">መመሪያዎች እና መመሪያዎች</h3></a></div>
                                     <div><a href="publications.html#annual-reports" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">ዓመታዊ የአፈጻጸም እና የገንዘብ ሪፖርቶች</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="publications.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ህትመቶች<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="publications.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ህትመቶች <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">የኦዲት ሪፖርቶች</a></li>
                     <li class="relative group">
-                        <a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
-                            ፖርታል
-                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <!-- Dropdown Menu -->
+                        <a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">ፖርታል <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+                        <!-- Portal Dropdown -->
                         <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="p-2">
                                 <div class="space-y-2">
@@ -183,12 +164,14 @@
                                     <div><a href="portal-help.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">የእገዛ ዴስክ አስተዳደር ስርዓት</h3></a></div>
                                     <div><a href="apk-portal.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">የትግበራዎች ፖርታል</h3></a></div>
                                 </div>
-                                <div class="mt-2 pt-4 border-t"><a href="portal.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ፖርታል<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a></div>
+                                <div class="mt-2 pt-4 border-t">
+                                    <a href="portal.html" class="flex items-center text-mainblue font-medium hover:text-blue-800">ፖርታል <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="relative group">
-                        <a href="contact.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1 flex items-center">
+                        <a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
                             እኛን ያነጋግሩን
                             <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -220,145 +203,78 @@
             </div>
         </nav>
     </header>
-    <!-- End Header and Navigation Bar -->
 
-    <!-- Hero/Banner Section -->
-    <section class="relative h-[80vh]">
-        <!-- Background image -->
-        <img src="./assets/banners/services-banner.jpg" alt="OFAG Services" class="w-full h-[80vh] object-cover" />
-        
-        <!-- Content overlay -->
-        <div class="absolute  bottom-[10%] left-1/2 transform -translate-x-1/2 flex  items-center justify-center">
-            <div class="bg-white bg-opacity-95 rounded-lg p-12 max-w-4xl mx-4 shadow-lg">
-                <h1 class="text-mainblue text-[48px] md:text-[56px] font-bold mb-6">አገልግሎቶች</h1>
-                <p class="text-mainblue text-lg md:text-[20px] leading-relaxed text-justify">
-                    የፌዴራል ዋና ኦዲተር መሥሪያ ቤት (ኦፌዴ) በሕዝብ የፋይናንስ አስተዳደር ላይ ተጠያቂነትንና ግልጽነትን ለማረጋገጥ የተለያዩ ኦዲቶችን ያካሂዳል። አገልግሎቶቹ የአፈጻጸም ኦዲት፣ የአካባቢ ኦዲት፣ የአይቲ ኦዲት፣ ልዩ ኦዲት እና ሌሎች የኦዲት አገልግሎቶችን ያጠቃልላል።
-                </p>
+    <main class="py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold text-mainblue mb-4">አስተያየት ያስገቡ</h1>
+                <p class="text-gray-600 mb-8">ጥያቄዎችዎን፣ ቅሬታዎችዎን ወይም የተጠረጠሩ ማጭበርበርን ወይም ሙስናን ሪፖርት ለማድረግ እባክዎ ከታች ያለውን ቅጽ ይጠቀሙ። የእርስዎ አስተያየት ሚስጥራዊ እና ለእኛ አስፈላጊ ነው።</p>
+                
+                <form id="feedback-form" class="space-y-6">
+                    <div>
+                        <label for="feedback-type" class="block text-sm font-medium text-gray-700 mb-1">የአስተያየት አይነት</label>
+                        <select id="feedback-type" name="feedback-type" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue">
+                            <option value="query">አጠቃላይ ጥያቄ</option>
+                            <option value="fraud">ማጭበርበር/ሙስና ሪፖርት ያድርጉ</option>
+                            <option value="complaint">ቅሬታ</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">ሙሉ ስም</label>
+                            <input type="text" id="full-name" name="full-name" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="ሙሉ ስም">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">የኢሜይል አድራሻ</label>
+                            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="you@example.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">ስልክ ቁጥር (አማራጭ)</label>
+                        <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="+251 91 123 4567">
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">ጉዳይ</label>
+                        <input type="text" id="subject" name="subject" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="የመልዕክትዎ ርዕሰ ጉዳይ">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">መልዕክት</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-mainblue" placeholder="እባክዎ በተቻለ መጠን ብዙ ዝርዝር መረጃ ያቅርቡ።"></textarea>
+                    </div>
+
+                    <div id="file-upload-container" class="hidden">
+                        <label for="file-upload" class="block text-sm font-medium text-gray-700 mb-1">ማስረጃ ያያይዙ (አማራጭ)</label>
+                        <p class="text-xs text-gray-500 mb-2">ሪፖርትዎን ለመደገፍ ሰነዶችን፣ ምስሎችን ወይም ሌሎች ፋይሎችን መስቀል ይችላሉ። ከፍተኛው የፋይል መጠን: 10MB</p>
+                        <input type="file" id="file-upload" name="file-upload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-mainblue hover:file:bg-blue-100">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="w-full bg-mainblue text-white font-bold py-3 rounded-md hover:bg-opacity-90 transition-colors shadow-md hover:shadow-lg">አስተያየት ያስገቡ</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Services List Section -->
-    <section id="business-services" class="bg-white py-16">
-        <!-- Online Services anchor point -->
-        <div id="online-services"></div>
-        <!-- Service Guidelines anchor point -->
-        <div id="service-guidelines"></div>
-        <!-- Service Feedback anchor point -->
-        <div id="service-feedback"></div>
-        <div class="container mx-auto px-4 max-w-7xl">
-            <div class="space-y-12">
-                <!-- Regularity Auditing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1">
-                        <img src="./assets/services/service1.jpg" alt="Regularity Auditing" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">የቁጥጥር ኦዲት</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            የአንድ ድርጅት የፋይናንስ እና የህግ ተገዢነት ሪፖርት ገለልተኛ፣ ተጨባጭ ግምገማ...
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Performance Auditing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1 order-2 md:order-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">የአፈጻጸም ኦዲት</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            ይህ ለሙከራ የቀረበ ጽሑፍ ሲሆን፣ የገጹን ንድፍ ለማሳየት ብቻ የቀረበ ነው። ትክክለኛው ይዘት በቅርቡ ይገባል።...
-                        </p>
-                    </div>
-                    <div class="flex-1 order-1 md:order-2">
-                        <img src="./assets/services/service2.jpg" alt="Performance Auditing" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                </div>
-
-                <!-- Environmental Auditing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1">
-                        <img src="./assets/services/service3.jpg" alt="Environmental Auditing" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">የአካባቢ ኦዲት</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            የአንድ ድርጅት የፋይናንስ እና የህግ ተገዢነት ሪፖርት ገለልተኛ፣ ተጨባጭ ግምገማ...
-                        </p>
-                    </div>
-                </div>
-
-                <!-- IT Auditing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1 order-2 md:order-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">የአይቲ ኦዲት</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            ይህ ለሙከራ የቀረበ ጽሑፍ ሲሆን፣ የገጹን ንድፍ ለማሳየት ብቻ የቀረበ ነው። ትክክለኛው ይዘት በቅርቡ ይገባል።...
-                        </p>
-                    </div>
-                    <div class="flex-1 order-1 md:order-2">
-                        <img src="./assets/services/service4.jpg" alt="IT Auditing" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                </div>
-
-                <!-- Special Audits -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1">
-                        <img src="./assets/services/service5.jpg" alt="Special Audits" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">ልዩ ኦዲቶች</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            የአንድ ድርጅት የፋይናንስ እና የህግ ተገዢነት ሪፖርት ገለልተኛ፣ ተጨባጭ ግምገማ...
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Other Services -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1 order-2 md:order-1">
-                        <h3 class="text-mainblue text-[28px] font-bold mb-4">ሌሎች አገልግሎቶች</h3>
-                        <p class="text-gray-600 text-[16px] leading-relaxed">
-                            ይህ ለሙከራ የቀረበ ጽሑፍ ሲሆን፣ የገጹን ንድፍ ለማሳየት ብቻ የቀረበ ነው። ትክክለኛው ይዘት በቅርቡ ይገባል።...
-                        </p>
-                    </div>
-                    <div class="flex-1 order-1 md:order-2">
-                        <img src="./assets/services/service6.jpg" alt="Other Services" class="w-full h-[284px] rounded-lg object-cover" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  
-
-    <!-- Call-to-Action Section (Update content as needed) -->
-    <section id="faqs" class="bg-white pt-24">
-        <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 mb-[-60px] shadow-lg max-w-5xl mx-auto relative z-10">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-mainblue text-[24px] font-bold mb-2">ተደጋግመው የሚጠየቁ ጥያቄዎችን ያስሱ</h3>
-                    <p class="text-gray-600 text-[16px]">የሚፈልጉትን አላገኙም?</p>
-                </div>
-                <a href="faq.html" class="bg-mainblue text-white font-medium px-8 py-3 rounded-md text-lg hover:bg-blue-900 transition">ተ.ጠ.ጥ.</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section (Duplicated from About Page) -->
+    <!-- Footer Section -->
     <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row md:justify-between gap-12">
                 <!-- Left: Logo and Info -->
                 <div class="flex-1 min-w-[220px]">
                     <div class="flex items-center mb-4">
-                        <img src="./assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
+                        <img src="../assets/footer-logo.png" alt="OFAG Logo" class="h-12 w-auto mr-3" />
                     </div>
                     <div class="space-y-3 text-white text-sm">
                         <div class="flex items-start">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 mt-1 flex-shrink-0">
                             <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
                           </svg>
-                          <div>Office of the Federal Auditor General (OFAG)<br> Africa Avenue, Flamingo Area,<br> Addis Ababa, P.O.Box: 457</div>
+                          <div>የፌዴራል ዋና ኦዲተር መሥሪያ ቤት (OFAG)<br> አፍሪካ ጎዳና፣ ፍላሚንጎ አካባቢ፣<br> አዲስ አበባ፣ ፖ.ሳ.ቁ፡ 457</div>
                         </div>
                         <div class="flex items-center">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 flex-shrink-0">
@@ -381,13 +297,13 @@
                         </div>
                       </div>
                     <div class="flex space-x-3 mt-4">
-                        <a href="mailto:info@ofag.gov.et"><img src="./assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
-                        <a href="https://t.me/OFAGETHIOPIA"><img src="./assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
-                        <a href="https://www.youtube.com/@OFAGETHIOPIA"><img src="./assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
-                        <a href="https://www.facebook.com/OFAGETHIOPIA"><img src="./assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
-                        <a href="https://www.instagram.com/OFAGETHIOPIA"><img src="./assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
-                        <a href="https://www.linkedin.com/company/ofag-ethiopia/"><img src="./assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
-                        <a href="https://x.com/OFAGETHIOPIA"><img src="./assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
+                        <a href="mailto:info@ofag.gov.et"><img src="../assets/icons/gmail.png" alt="Email" class="h-6 w-6" /></a>
+                        <a href="https://t.me/OFAGETHIOPIA"><img src="../assets/icons/telegram.png" alt="Telegram" class="h-6 w-6" /></a>
+                        <a href="https://www.youtube.com/@OFAGETHIOPIA"><img src="../assets/icons/youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+                        <a href="https://www.facebook.com/OFAGETHIOPIA"><img src="../assets/icons/facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+                        <a href="https://www.instagram.com/OFAGETHIOPIA"><img src="../assets/icons/instagram.png" alt="Instagram" class="h-6 w-6" /></a>
+                        <a href="https://www.linkedin.com/company/ofag-ethiopia/"><img src="../assets/icons/linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+                        <a href="https://x.com/OFAGETHIOPIA"><img src="../assets/icons/x.png" alt="x" class="h-6 w-6" /></a>
                     </div>
                 </div>
                 <!-- Middle: Navigation -->
@@ -397,10 +313,10 @@
                         <li><a href="index.html" class="footer-link hover:underline">ዋና ገጽ</a></li>
                         <li><a href="about.html" class="footer-link hover:underline">ስለ እኛ</a></li>
                         <li><a href="news.html" class="footer-link hover:underline">የመገናኛ ብዙኃን ማዕከል</a></li>
-                        <li><a href="#" class="footer-link hover:underline">ህትመቶች</a></li>
+                        <li><a href="legislations.html" class="footer-link hover:underline">ህትመቶች</a></li>
                         <li><a href="announcements.html" class="footer-link hover:underline">ማስታወቂያዎች</a></li>
                         <li><a href="audit-reports.html" class="footer-link hover:underline">የኦዲት ሪፖርቶች</a></li>
-                        <li><a href="#" class="footer-link hover:underline">የኦፌዴ ፖርታል</a></li>
+                        <li><a href="portal.html" class="footer-link hover:underline">የኦፌዴን ፖርታል</a></li>
                         <li><a href="contact.html" class="footer-link hover:underline">እኛን ያነጋግሩን</a></li>
                     </ul>
                 </div>
@@ -428,11 +344,10 @@
                 </div>
             </div>
             <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-white text-xs opacity-70">
-                &copy; 2024 የፌዴራል ዋና ኦዲተር መሥሪያ ቤት። መብቱ በህግ የተጠበቀ ነው.
+                &copy; 2024 የፌዴራል ዋና ኦዲተር ጽህፈት ቤት። መብቱ በህግ የተጠበቀ ነው.
             </div>
         </div>
     </footer>
-
-    <script src="./main.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html> 
