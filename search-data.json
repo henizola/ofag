@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home",
+    "url": "index.html",
+    "content": "OFAG is an overseeing government institution endowed with the legal mandate of inspecting and validating the auditory standings of different government bodies."
+  },
+  {
+    "title": "About Us",
+    "url": "about.html",
+    "content": "About OFAG, Missions, vision and values, Message of deputy auditor general, Our Achievements, Legislations, Meet the Management Team, Frequently Asked Questions."
+  },
+  {
+    "title": "Services",
+    "url": "services.html",
+    "content": "Regularity Auditing, Performance Auditing, IT Auditing, Environmental Auditing, Special Auditing, Other Services."
+  },
+  {
+    "title": "News",
+    "url": "news.html",
+    "content": "Latest News and Media. Press Releases, Public Statements."
+  },
+  {
+    "title": "Contact Us",
+    "url": "contact.html",
+    "content": "Office of the Federal Auditor General (OFAG) Africa Avenue, Flamingo Area, Addis Ababa, P.O.Box: 457"
+  }
+] 
