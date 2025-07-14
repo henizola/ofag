@@ -26,3 +26,10 @@
   line-height: 27px;
   letter-spacing: 0%;
 }
+
+/* Hide main navigation on small screens */
+@media (max-width: 767px) {
+  header nav {
+    display: none !important;
+  }
+}

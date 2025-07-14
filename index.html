@@ -39,15 +39,21 @@
         <div class="relative z-20" style="height: 60px;">
             <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('./assets/header pattern.png');"></div>
             
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="absolute right-4 top-1/2 -translate-y-1/2 md:hidden text-mainblue focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
             <!-- Centered Logo -->
             <div class="flex items-center justify-center h-full">
                 <a href="index.html">
-                    <img src="./assets/header logo.png" alt="OFAG Logo" class="h-12">
+                    <img src="./assets/header logo.png" alt="OFAG Logo" class="h-10 md:h-12">
                 </a>
             </div>
 
             <!-- Search and Language on the right -->
-            <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-4">
+            <div class="absolute left-8 md:left-auto md:right-8 top-1/2 -translate-y-1/2 flex items-center space-x-4">
                 <!-- Search -->
                 <div class="relative" id="search-container">
                     <button id="search-button" class="text-[#2c4067] transition-transform duration-300 ease-in-out hover:scale-110">
@@ -69,8 +75,8 @@
                 </div>
             </div>
         </div>
-        <!-- Navigation Bar -->
-        <nav class="bg-[#f6f8fa] border-t" style="height: 85px;">
+        <!-- Navigation Bar (Desktop) -->
+        <nav class="bg-[#f6f8fa] border-t hidden md:block" style="height: 85px;">
             <div class="container mx-auto px-4 h-full flex items-center justify-center">
                 <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
                     <li><a href="index.html" class="text-mainblue text-base font-medium border-b-2 border-mainblue pb-1">Home</a></li>
@@ -432,6 +438,124 @@
     </header>
     <!-- End Header and Navigation Bar -->
 
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="fixed inset-0 z-50 bg-white transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+        <div class="p-6">
+            <button id="mobile-nav-close" class="mb-6 text-mainblue focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <ul class="space-y-4">
+                <li><a href="index.html" class="text-mainblue text-lg font-medium block">Home</a></li>
+
+                <!-- About Us -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        About us
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="about.html#about-us" class="block text-mainblue">About Us</a></li>
+                        <li><a href="about.html#mission-vision-values" class="block text-mainblue">Mission, Vision and Values</a></li>
+                        <li><a href="about.html#leadership-officials" class="block text-mainblue">Organizational Structure</a></li>
+                        <li><a href="about.html#leadership-officials" class="block text-mainblue">Leadership Officials</a></li>
+                        <li><a href="about.html#governing-laws-mandates" class="block text-mainblue">Governing Laws & Mandates</a></li>
+                        <li><a href="about.html#strategic-plans" class="block text-mainblue">Strategic Plans</a></li>
+                    </ul>
+                </li>
+
+                <!-- Services -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        Services
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="services.html#business-services" class="block text-mainblue">Business Services</a></li>
+                        <li><a href="services.html#online-services" class="block text-mainblue">Online Services</a></li>
+                        <li><a href="services.html#service-guidelines" class="block text-mainblue">Service Guidelines</a></li>
+                        <li><a href="services.html#faqs" class="block text-mainblue">FAQs</a></li>
+                        <li><a href="services.html#service-feedback" class="block text-mainblue">Service Feedback</a></li>
+                    </ul>
+                </li>
+
+                <!-- Media Center -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        Media Center
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="news.html" class="block text-mainblue">Latest News</a></li>
+                        <li><a href="gallery.html" class="block text-mainblue">Magazine & Gallery</a></li>
+                        <li><a href="newsletter.html" class="block text-mainblue">Archive</a></li>
+                        <li><a href="announcements.html" class="block text-mainblue">Event Highlights</a></li>
+                    </ul>
+                </li>
+
+                <!-- Announcements -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        Announcements
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="announcements.html#upcoming-events" class="block text-mainblue">Upcoming Events</a></li>
+                        <li><a href="alumni.html" class="block text-mainblue">OFAG Alumni</a></li>
+                        <li><a href="announcements.html#vacancies" class="block text-mainblue">Vacancies</a></li>
+                        <li><a href="announcements.html#bids" class="block text-mainblue">Bids</a></li>
+                    </ul>
+                </li>
+
+                <!-- Publications -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        Publications
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="publications.html#news-stories" class="block text-mainblue">News and Stories</a></li>
+                        <li><a href="publications.html#press-statements" class="block text-mainblue">Press Statements</a></li>
+                        <li><a href="newsletter.html" class="block text-mainblue">Newsletters</a></li>
+                        <li><a href="publications.html#strategic-documents" class="block text-mainblue">Strategic Documents</a></li>
+                        <li><a href="publications.html#manuals-guidelines" class="block text-mainblue">Manuals & Guidelines</a></li>
+                        <li><a href="publications.html#annual-reports" class="block text-mainblue">Annual Reports</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="audit-reports.html" class="text-mainblue text-lg font-medium block">Audit Reports</a></li>
+
+                <!-- Portal -->
+                <li>
+                    <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">
+                        Portal
+                        <svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="mt-2 pl-4 space-y-2 hidden">
+                        <li><a href="portal.html" class="block text-mainblue">ART Portal</a></li>
+                        <li><a href="portal-help.html" class="block text-mainblue">Helpdesk</a></li>
+                        <li><a href="apk-portal.html" class="block text-mainblue">Applications Portal</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html" class="text-mainblue text-lg font-medium block">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Hero/Banner Section -->
     <section>
       <!-- Blue bar with text -->
@@ -451,56 +575,152 @@
       </div>
     </section>
 
-    <!-- AG Message and Latest Report Section -->
-    <section class="py-16 bg-[#F4F6F7]">
+    <!-- AG Message + Recent Reports Section (Redesigned) -->
+    <section class="py-16 bg-[#ffffff]">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          
-          <!-- Left Column: Auditor General's Message -->
-          <div class="flex flex-col h-full">
-            <h2 class="text-mainblue text-3xl font-bold mb-6">Auditor General's Message</h2>
-            <div class="bg-white rounded-lg shadow p-6 flex-grow flex flex-col">
-              <div class="flex items-start gap-4">
-                <img src="./assets/team/meseret-damte.png" alt="Auditor General" class="rounded-full w-24 h-24 object-cover border-4 border-gray-100" />
-                <div class="flex-1">
-                  <h3 class="text-mainblue font-bold text-xl">H.E Meseret Damte</h3>
-                  <p class="text-gray-500 text-sm">Auditor General</p>
-                </div>
-              </div>
-              <p class="text-gray-600 my-4 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis...
-              </p>
-              <button onclick="openAuditorModal()" class="mt-auto inline-block px-6 py-2 border border-mainblue text-mainblue rounded-md hover:bg-mainblue hover:text-white transition w-full md:w-auto">Read Full Message</button>
+        <div class="grid grid-cols-1  ml-[20vh] lg:grid-cols-10 gap-12 items-start ">
+          <!-- Left: Image + Message -->
+          <div class="flex flex-col space-y-6 lg:col-span-4">
+            <img src="./assets/auditor-general-message.png" alt="Auditor General" class="w-full h-auto rounded-lg object-cover object-top shadow mx-auto" />
+            <div>
+              <h3 class="text-mainblue text-xl font-semibold mb-1">H.E Meseret Damte</h3>
+              <h2 class="text-mainblue text-3xl font-bold mb-3">Auditor General's Message</h2>
+              <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus ante eu faucibus volutpat. Sed posuere mi eu nibh convallis mattis...</p>
+              <a href="#" onclick="openAuditorModal()" class="inline-block px-6 py-2 border border-mainblue text-mainblue rounded-md hover:bg-mainblue hover:text-white transition">Read More</a>
             </div>
           </div>
 
-          <!-- Right Column: Latest Audit Report -->
-          <div class="flex flex-col h-full">
-            <h2 class="text-mainblue text-3xl font-bold mb-6">Latest Report</h2>
-            <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col flex-grow">
-              <img src="./assets/news/news1.png" alt="News 1" class="news-img w-full h-56 object-cover" />
-              <div class="p-5 flex-1 flex flex-col">
-                <div class="font-bold text-mainblue mb-3">The need to further increase mineral resource revenues by correcting audit findings was highlighted</div>
-                <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
+          <!-- Right: Recent Reports List -->
+          <div class="bg-white rounded-xl shadow p-8 flex flex-col w-full lg:col-span-4">
+            <h2 class="text-mainblue text-2xl font-bold mb-6">Recent Annual Year Audit Reports</h2>
+            <div class="space-y-4 flex-1">
+              <!-- Item Template -->
+              <div class="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-50">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/icons/folder.png" alt="folder" class="h-6 w-6" />
+                  <div>
+                    <p class="text-mainblue font-medium">2017 E.C Annual year Report</p>
+                    <p class="text-gray-500 text-xs">2017/2018 Audit Year</p>
+                  </div>
+                </div>
               </div>
+              <div class="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-50">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/icons/folder.png" alt="folder" class="h-6 w-6" />
+                  <div>
+                    <p class="text-mainblue font-medium">2016 E.C Annual year Report</p>
+                    <p class="text-gray-500 text-xs">2016/2017 Audit Year</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-50">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/icons/folder.png" alt="folder" class="h-6 w-6" />
+                  <div>
+                    <p class="text-mainblue font-medium">2015 E.C Annual year Report</p>
+                    <p class="text-gray-500 text-xs">2015/2016 Audit Year</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-50">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/icons/folder.png" alt="folder" class="h-6 w-6" />
+                  <div>
+                    <p class="text-mainblue font-medium">2014 E.C Annual year Report</p>
+                    <p class="text-gray-500 text-xs">2014/2015 Audit Year</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-2 py-3 rounded hover:bg-gray-50">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/icons/folder.png" alt="folder" class="h-6 w-6" />
+                  <div>
+                    <p class="text-mainblue font-medium">2013 E.C Annual year Report</p>
+                    <p class="text-gray-500 text-xs">2013/2014 Audit Year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 text-center">
+              <a href="audit-reports.html" class="inline-block bg-mainblue text-white px-8 py-2 rounded-md font-medium hover:bg-blue-900 transition">View All Reports</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Separator Pattern Section -->
-    <!-- <section class="w-full bg-white py-16">
-      <img src="./assets/patterns/left separator.png" alt="Separator Pattern" class="block w-1/2" />
-    </section> -->
+    <!-- About Us Section (Moved Up) -->
+    <section class="py-20 bg-[#F4F6F7]">
+      <div class="container mx-auto px-4 max-w-6xl text-center">
+        <h2 class="text-mainblue text-4xl md:text-5xl font-bold mb-10">About Us</h2>
+        <p class="text-mainblue text-lg md:text-xl max-w-4xl mx-auto mb-12">The government agency OFAG is tasked with monitoring and auditing public entities' financial performance. As a model for successful public service, we have been advocating for:</p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 text-mainblue text-2xl font-semibold mb-12">
+          <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" /></svg>Accountability</div>
+          <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" /></svg>Transparency &</div>
+          <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M5 6h14M4 14h16M7 18h10" /></svg>Good Governance</div>
+        </div>
+        <p class="text-mainblue text-lg md:text-xl mb-4">in national, regional, and local administrations for almost:</p>
+        <div class="text-mainblue text-4xl md:text-5xl font-extrabold mb-12">80 Years</div>
+        <a href="about.html" class="inline-block bg-mainblue text-white text-lg font-semibold px-12 py-3 rounded-md hover:bg-blue-900 transition">Learn More About Us</a>
+      </div>
+    </section>
 
-  
+      <!-- Our Services Section -->
+      <section class="py-16 bg-mainblue relative overflow-hidden" style="">
+        <!-- Pattern overlay -->
+        <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+        <div class="relative container mx-auto px-4">
+          <h2 class="text-white text-3xl font-bold mb-2 text-left">Our Services</h2>
+          <p class="text-white text-xl mb-10 text-left">We Provide What You Need</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 px-[10%]">
+            <!-- Service Card 1 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/regularity.png" alt="Regularity Auditing" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">Regularity Auditing</div>
+              <div class="text-mainblue text-[16px]">an independent, objective evaluation of an organization's financial and compliance reporting ...</div>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/performance.png" alt="Performance Auditing" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">Performance Auditing</div>
+              <div class="text-mainblue text-[16px]">refers to an independent examination of a program, function, operation or the management ...</div>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/it.png" alt="IT Auditing" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">IT Auditing</div>
+              <div class="text-mainblue text-[16px]">evaluating evidence to determine whether information systems and related ...</div>
+            </div>
+            <!-- Service Card 4 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/environmental.png" alt="Environmental Auditing" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">Environmental Auditing</div>
+              <div class="text-mainblue text-[16px]">a management tool comprising systematic, documented, periodic and objective</div>
+            </div>
+            <!-- Service Card 5 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/special.png" alt="Special Auditing" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">Special Auditing</div>
+              <div class="text-mainblue text-[16px]">Special Audits are needed when it is suspected that laws or regulations have been violated in the financial management</div>
+            </div>
+            <!-- Service Card 6 -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
+              <img src="./assets/icons/other.png" alt="Other Services" class="h-14 mb-4" />
+              <div class="text-mainblue font-bold text-[24px]  mb-4">Other Services</div>
+              <div class="text-mainblue text-[16px]">Audit Quality Assurance,<br>Audit Consultancy,<br>Audit Capacity Building</div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <a href="services.html" class="border border-white text-white font-medium px-8 py-3 rounded-md hover:bg-white hover:text-mainblue transition">Find More About Our Services</a>
+          </div>
+        </div>
+      </section>
 
     <!-- Latest News and Media Section -->
     <section class="bg-white py-16">
       <div class="container mx-auto px-4">
         <h2 class="text-mainblue text-3xl font-bold text-center mb-10">More News and Media</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 justify-center">
           <!-- News Card 2 -->
           <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
             <img src="./assets/news/news2.png" alt="News 2" class="news-img w-full h-56 object-cover rounded-t-xl" />
@@ -517,6 +737,14 @@
               <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
             </div>
           </div>
+          <!-- News Card 4 (new) -->
+          <div class="news-card bg-white rounded-xl shadow p-0 overflow-hidden flex flex-col">
+            <img src="./assets/news/news4.png" alt="News 4" class="news-img w-full h-56 object-cover rounded-t-xl" />
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="font-bold text-mainblue mb-3">OFAG held training session on audit quality assurance best practices</div>
+              <a href="news-detail.html" class="text-mainblue font-medium mt-auto hover:underline">Learn more</a>
+            </div>
+          </div>
         </div>
         <div class="flex justify-center">
           <a href="news.html" class="bg-mainblue text-white font-bold text-[24px] px-8 py-3 rounded-md shadow hover:bg-blue-900 transition">Explore More Media And Announcements</a>
@@ -524,85 +752,10 @@
       </div>
     </section>
     
-    <!-- Our Services Section -->
-    <section class="py-16 bg-mainblue relative overflow-hidden" style="">
-      <!-- Pattern overlay -->
-      <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
-      <div class="relative container mx-auto px-4">
-        <h2 class="text-white text-3xl font-bold mb-2 text-center">Our Services</h2>
-        <p class="text-white text-xl mb-10 text-center">We Provide What You Need</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 px-[10%]">
-          <!-- Service Card 1 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/regularity.png" alt="Regularity Auditing" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">Regularity Auditing</div>
-            <div class="text-mainblue text-[16px]">an independent, objective evaluation of an organization's financial and compliance reporting ...</div>
-          </div>
-          <!-- Service Card 2 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/performance.png" alt="Performance Auditing" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">Performance Auditing</div>
-            <div class="text-mainblue text-[16px]">refers to an independent examination of a program, function, operation or the management ...</div>
-          </div>
-          <!-- Service Card 3 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/it.png" alt="IT Auditing" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">IT Auditing</div>
-            <div class="text-mainblue text-[16px]">evaluating evidence to determine whether information systems and related ...</div>
-          </div>
-          <!-- Service Card 4 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/environmental.png" alt="Environmental Auditing" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">Environmental Auditing</div>
-            <div class="text-mainblue text-[16px]">a management tool comprising systematic, documented, periodic and objective</div>
-          </div>
-          <!-- Service Card 5 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/special.png" alt="Special Auditing" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">Special Auditing</div>
-            <div class="text-mainblue text-[16px]">Special Audits are needed when it is suspected that laws or regulations have been violated in the financial management</div>
-          </div>
-          <!-- Service Card 6 -->
-          <div class="bg-white bg-opacity-90 rounded-xl shadow p-8 flex flex-col items-center text-center">
-            <img src="./assets/icons/other.png" alt="Other Services" class="h-14 mb-4" />
-            <div class="text-mainblue font-bold text-[24px]  mb-4">Other Services</div>
-            <div class="text-mainblue text-[16px]">Audit Quality Assurance,<br>Audit Consultancy,<br>Audit Capacity Building</div>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <a href="services.html" class="border border-white text-white font-medium px-8 py-3 rounded-md hover:bg-white hover:text-mainblue transition">Find More About Our Services</a>
-        </div>
-      </div>
-    </section>
+  
 
-   
-    <!-- Separator Pattern Section -->
-    <!-- <section class="w-full bg-white py-16 flex justify-end">
-        <img src="./assets/patterns/left separator.png" alt="Separator Pattern" class="block  w-1/2" />
-      </section> -->
-
-       <!-- About Us Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-          <h2 class="text-mainblue text-2xl md:text-[48px] font-bold text-center mb-6">About Us</h2>
-          <div class="text-mainblue text-center font-thin  px-[15vw] mx-auto space-y-4 my-16 text-[24px]">
-            <p class="leading-[40px]">
-              OFAG is an overseeing government institution endowed with the legal mandate of inspecting and validating the auditory standings of different government bodies.
-            </p>
-            <p class="leading-[40px]">
-              We value transparency - spearhead accountability and good governance with a cross-functional ways of working incorporating all government bodies as well as regional and city administrations.
-            </p>
-            <p class="leading-[40px]">
-              Since our foundation almost eight decades ago, we have grown to become the role model center of a functioning and efficient government.
-            </p>
-          </div>
-          <div class="flex justify-center">
-            <a href="about.html" class="bg-mainblue text-white font-bold px-8 py-2 rounded-md text-lg hover:bg-blue-900 transition">Learn More About Us</a>
-          </div>
-        </div>
-      </section>
-   <!-- Statistics Section -->
-   <section class="bg-[#CCD3DB36] py-10 my-10">
+    <!-- Statistics Section -->
+    <section class="bg-[#CCD3DB36] py-10 my-10">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-7 gap-6 text-center">
         <div>
@@ -637,6 +790,31 @@
     </div>
   </section>
 
+    <!-- Featured Media Section -->
+    <section class="bg-white py-24 relative overflow-hidden">
+      <!-- Decorative pattern top right -->
+      <img src="./assets/backgrounds/pattern.png" class="absolute right-0 top-0 w-1/2 opacity-10 pointer-events-none hidden md:block" alt="pattern" />
+      <div class="container mx-auto px-4 max-w-7xl relative z-10">
+        <h2 class="text-mainblue text-4xl font-bold mb-2">Featured Media</h2>
+        <p class="text-mainblue text-lg mb-1">Interview with the Auditor General</p>
+        <p class="text-mainblue text-sm mb-8">10/06/2025</p>
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <!-- Main video -->
+          <div class="w-full md:flex-[3] aspect-video bg-gray-200 rounded-lg overflow-hidden">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/aFm2I_qdwtY?si=gRSWAojJ0Ms_fOLp" title="YouTube video player" frameborder="0" allowfullscreen  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <!-- Side videos -->
+          <div class="flex flex-row md:flex-col gap-6 md:gap-8 w-full md:flex-[1.5]">
+            <div class="w-1/2 md:w-full aspect-video bg-gray-200 rounded-lg overflow-hidden">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/DQnTU_zRhNs?si=gDV9-A1rMioNiQzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="w-1/2 md:w-full aspect-video bg-gray-200 rounded-lg overflow-hidden">
+              <iframe  class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/NT1PqngfaFs?si=dUcAOGvPhGUoLXMl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Partners and Clients Section (Auto-scrolling) -->
     <section class="bg-white py-12">

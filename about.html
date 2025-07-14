@@ -401,15 +401,15 @@
     </header>
     <!-- End Header and Navigation Bar -->
 
-    <!-- Hero/Banner Section -->
+  
+
     <section id="about-us" class="relative">
         <!-- Banner image -->
-        <img src="./assets/banners/about-banner.jpg" alt="About OFAG" class="w-full h-[60vh] object-cover object-right-bottom" />
-        
+        <img src="./assets/banners/about-banner.jpg" alt=">About OFAG" class="w-full h-[60vh] object-cover object-right-bottom" />
+        <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>  
         <!-- Blue overlay section -->
-        <div class="bg-mainblue text-white py-16">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-white text-[48px] md:text-[64px] font-bold mb-8">About OFAG</h1>
+        <div class="bg-mainblue text-white py-16 ">
+                <h1 class="text-white text-[48px] w-full text-center md:text-[64px] font-bold mb-8">About OFAG</h1>
                 <div class="max-w-7xl mx-auto">
                     <p class="text-white text-lg md:text-[20px] font-light leading-[32px] tracking-wide">
                         WE UPHOLD EXCELLENCE IN CHECK AND BALANCE THROUGH FACTUAL GOVERNMENTAL AUDITS. ROOTED IN INNOVATION AND COMMITMENT TO KEEPING GOVERNMENT ENTITIES HONEST, WE UNLEASH POTENTIAL IN EVERY AUDIT ASPECT, FROM PROFESSIONALS TO ENTHUSIASTS. WITH A DYNAMIC PERSONALITY AND A PROMISE OF QUALITY, WE DELIVER A FUTURE BLENDING PERFORMANCE AND AUDITING, ENSURING TRANSPARENCY AND VALUE, EFFICIENCY, AND TIME IN GOVERNMENT OPERATIONS
@@ -418,19 +418,16 @@
             </div>
         </div>
     </section>
-
     <!-- Values, Mission, Vision Section -->
-    <section id="mission-vision-values" class="py-16 bg-mainblue relative overflow-hidden">
-        <!-- Pattern overlay -->
-        <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+    <section id="mission-vision-values" class="py-24 bg-white">
         <div class="relative container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Values Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="./assets/icons/values.png" alt="Values" class="h-16 w-auto mx-auto mb-6" />
-                    <h3 class="text-white text-[32px] font-bold mb-6">Values</h3>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
-                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                    <img src="./assets/about/Vector (1).svg" alt="Values" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-mainblue text-[32px] font-bold mb-6">Values</h3>
+                    <div class="bg-[#F4F6F9] rounded-xl p-8 shadow-sm flex-1 flex items-center justify-center">
+                        <p class="text-mainblue text-[16px] leading-relaxed text-center">
                             contribute towards enhancing good governance and effectiveness of the government institutions' per formance by undertaking independent audit services based on international standards and supreme audit institutions
                         </p>
                     </div>
@@ -438,10 +435,10 @@
 
                 <!-- Mission Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="./assets/icons/mission.png" alt="Mission" class="h-16 w-auto mx-auto mb-6" />
-                    <h3 class="text-white text-[32px] font-bold mb-6">Mission</h3>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
-                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                    <img src="./assets/about/Vector.png" alt="Mission" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-mainblue text-[32px] font-bold mb-6">Mission</h3>
+                    <div class="bg-[#F4F6F9] rounded-xl p-8 shadow-sm flex-1 flex items-center justify-center">
+                        <p class="text-mainblue text-[16px] leading-relaxed text-center">
                             to be a model sai in africa, that contributes to transparency and accountability for the benefit of "ethiopian" citizens by 2030.
                         </p>
                     </div>
@@ -449,10 +446,10 @@
 
                 <!-- Vision Card -->
                 <div class="text-center flex flex-col h-full">
-                    <img src="./assets/icons/vision.png" alt="Vision" class="h-16 w-auto mx-auto mb-6" />
-                    <h3 class="text-white text-[32px] font-bold mb-6">Vision</h3>
-                    <div class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-30 flex-1 flex items-center justify-center">
-                        <p class="text-white text-[16px] leading-relaxed text-justify">
+                    <img src="./assets/about/Vector (1).svg" alt="Vision" class="h-16 w-auto mx-auto mb-6" />
+                    <h3 class="text-mainblue text-[32px] font-bold mb-6">Vision</h3>
+                    <div class="bg-[#F4F6F9] rounded-xl p-8 shadow-sm flex-1 flex items-center justify-center">
+                        <p class="text-mainblue text-[16px] leading-relaxed text-center">
                             our organization is built on unwavering integrity. we adhere to the highest ethical standards, ensuring honesty guides every decision and action. by prioritizing integrity, we earn the trust and confidence of the public. fostering strong relationships built on credibility and reliability. integrity is not just a value; it's a fundamental principle shaping our culture and driving us toward excellence
                         </p>
                     </div>
@@ -669,8 +666,8 @@
         });
     </script>
     
-    <!-- Employee Statistics Section -->
-    <section class="bg-[#F4F6F7] py-16">
+    <!-- Employee Statistics Section (hidden original) -->
+    <section class="bg-[#F4F6F7] py-16 hidden">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Retail Auditors -->
@@ -678,19 +675,16 @@
                     <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="325">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Retail Auditors</div>
                 </div>
-                
                 <!-- Performance Auditors -->
                 <div class="text-center">
                     <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="75">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">Performance<br>Auditors</div>
                 </div>
-                
                 <!-- IT Auditors -->
                 <div class="text-center">
                     <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="3">0</div>
                     <div class="text-mainblue text-[18px] md:text-[20px] font-medium">IT Auditors</div>
                 </div>
-                
                 <!-- Total Employees -->
                 <div class="text-center">
                     <div class="text-mainblue font-bold text-[48px] md:text-[64px] mb-2" data-count="610">0</div>
@@ -699,43 +693,32 @@
             </div>
         </div>
     </section>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const counters = document.querySelectorAll('[data-count]');
-            const speed = 900; // The lower the faster
-            
+            const speed = 900;
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const counter = entry.target;
                         const target = +counter.getAttribute('data-count');
-                        const count = +counter.innerText;
                         const increment = target / speed;
-                        
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + increment);
-                            const updateCount = () => {
-                                const count = +counter.innerText;
-                                if (count < target) {
-                                    counter.innerText = Math.ceil(count + increment);
-                                    setTimeout(updateCount, 1);
-                                } else {
-                                    counter.innerText = target;
-                                }
-                            };
-                            updateCount();
-                        } else {
-                            counter.innerText = target;
-                        }
+                        const update = () => {
+                            const current = +counter.innerText;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current + increment);
+                                setTimeout(update, 1);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        update();
                         observer.unobserve(counter);
                     }
                 });
-            }, { threshold: 0.5 }); // Start when 50% of element is visible
-            
-            counters.forEach(counter => {
-                observer.observe(counter);
-            });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => observer.observe(counter));
         });
     </script>
 
