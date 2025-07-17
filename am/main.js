@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchResults = document.getElementById('search-results');
 
     let searchData = [];
-    fetch('../search-data.json')
+    fetch('./search-data.json')
         .then(r=>r.json()).then(d=>searchData=d).catch(()=>{});
 
     if (searchButton) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const q=searchInput.value.toLowerCase();
             if(q.length<2){searchResults.innerHTML='';return;}
             const results=searchData.filter(i=>i.title.toLowerCase().includes(q)||i.content.toLowerCase().includes(q));
-            searchResults.innerHTML=results.length?results.map(r=>`<a href="${r.url}" class="block p-2 hover:bg-gray-100 rounded-md"><div class="font-bold text-mainblue">${r.title}</div><div class="text-sm text-gray-600">${r.content}</div></a>`).join(''):'<div class="p-2 text-gray-500">No results.</div>';});
+            searchResults.innerHTML=results.length?results.map(r=>`<a href="${r.url}" class="block p-2 hover:bg-gray-100 rounded-md"><div class="font-bold text-mainblue">${r.title}</div><div class="text-sm text-gray-600">${r.content}</div></a>`).join(''):'<div class="p-2 text-gray-500">ውጤት አልተገኘም።</div>';});
     }
 
     /* --------------------------- Mobile Navigation ---------------------------*/
