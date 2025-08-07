@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <ul class="space-y-4">
+                                        <ul class="space-y-4">
                         <li><a href="index.html" class="text-mainblue text-lg font-medium block">Home</a></li>
                         <li>
                             <button class="flex items-center justify-between w-full text-mainblue text-lg font-medium mobile-sub-toggle">About us<svg class="h-4 w-4 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></button>

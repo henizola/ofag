@@ -1,0 +1,103 @@
+    <!-- Footer Section -->
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 3,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          // autoplayHoverPause: true,
+          nav: true,
+          dots: true,
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+          smartSpeed: 800,
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1024: {
+              items: 3
+            }
+          }
+        });
+      });
+    </script>
+    <style>
+      /* Custom Owl Carousel styles for hero slider */
+      .owl-carousel.owl-theme {
+        position: relative;
+      }
+      .owl-carousel .owl-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        display: flex !important;
+        justify-content: center;
+        z-index: 10;
+      }
+      .owl-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+        z-index: 20;
+      }
+      .owl-carousel .owl-nav button.owl-prev,
+      .owl-carousel .owl-nav button.owl-next {
+     
+        color: #2c4067 !important;
+     
+        width: 48px;
+        height: 48px;
+        font-size: 4rem !important;
+      
+        border: none;
+       
+        pointer-events: auto;
+        transition: background 0.2s;
+      }
+      .owl-carousel .owl-nav button.owl-prev:hover,
+      .owl-carousel .owl-nav button.owl-next:hover {
+        background: transparent !important;
+      }
+      .owl-carousel .owl-nav button.owl-prev {
+        margin-left: 16px;
+      }
+      .owl-carousel .owl-nav button.owl-next {
+        margin-right: 16px;
+      }
+    </style>
+    <style>
+      /* News card image scaling on card hover */
+      .news-card {
+        overflow: hidden;
+      }
+      .news-card .news-img {
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+      }
+      .news-card:hover .news-img {
+        transform: scale(1.08);
+      }
+    </style>
+    <script>
+      // Minimal counting animation for stats
+      function animateCount(el, target, suffix, duration = 1600) {
+        let start = 0;
+        let startTimestamp = null;
+        const isK = suffix === 'K+';
+        const decimals = isK ? 1 : 0;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
