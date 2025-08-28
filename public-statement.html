@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Statements - OFAG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainblue: "#2c4067",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-40">
+        <div class="relative z-20" style="height: 60px;">
+            <div class="absolute inset-0 w-full h-full bg-repeat-x bg-center opacity-100 pointer-events-none" style="background-image: url('./assets/header pattern.png');"></div>
+            
+            <!-- Centered Logo -->
+            <div class="flex items-center justify-center h-full">
+                <a href="index.html">
+                    <img src="./assets/header logo.png" alt="OFAG Logo" class="h-12">
+                </a>
+            </div>
+  
+            <!-- Search and Language on the right -->
+            <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-4">
+                <!-- Search -->
+                <div class="relative" id="search-container">
+                    <button id="search-button" class="text-[#2c4067] transition-transform duration-300 ease-in-out hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"></path>
+                        </svg>
+                    </button>
+                    <div id="search-bar" class="absolute right-0 top-full mt-3 w-80 bg-white rounded-lg shadow-lg border p-4 hidden z-50">
+                        <input type="text" id="search-input" placeholder="Search..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mainblue">
+                        <div id="search-results" class="mt-4 max-h-60 overflow-y-auto"></div>
+                    </div>
+                </div>
+  
+                                 <!-- Language Switcher -->
+                 <div class="flex items-center space-x-2">
+                    <span class="text-[#2c4067] font-bold text-base">EN</span>
+                   <span class="text-gray-400">|</span>
+                   <a href="./am/public-statement.html" class="text-[#2c4067] font-medium text-base">አማ</a>
+                 </div>
+            </div>
+        </div>
+        <nav class="bg-[#f6f8fa] border-t hidden md:block" style="height: 60px;">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <ul class="flex flex-wrap items-center justify-center space-x-6 w-full">
+                    <li><a href="index.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Home</a></li>
+                    <li class="relative group">
+                        <a href="about.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            About us
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div><a href="about.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">About OFAG</h3></a></div>
+                                    <div><a href="about.html#mission-vision-values" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Missions, vision and values</h3></a></div>
+                                    <div><a href="about.html#achievements-section" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Our Achievements</h3></a></div>
+                                    <div><a href="legislations.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Legislations</h3></a></div>
+                                    <div><a href="team.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Meet the Management Team</h3></a></div>
+                                    <div><a href="faq.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Frequently Asked Questions</h3></a></div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="services.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Services
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div><a href="services.html#audit-services" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Audit Services</h3></a></div>
+                                    <div><a href="services.html#online-services" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Online Services</h3></a></div>
+                                    <div><a href="services.html#service-guidelines" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Service Guidelines</h3></a></div>
+                                    <div><a href="services.html#faqs" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">FAQs</h3></a></div>
+                                    <div><a href="feedback.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Service Feedback</h3></a></div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="news.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Media Center
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div>
+                                        <a href="news.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Latest News</h3>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="press-release.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Press Releases</h3>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="public-statement.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Public Statements</h3>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="gallery.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Magazine</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="gallery.html#photo-gallery" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Photo Gallery</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="gallery.html#video-gallery" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Video</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="newsletter.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Archive</h3>
+                                            
+                                        </a>
+                                    </div>
+                                  
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="announcements.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Announcements
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div><a href="announcements.html#upcoming-events" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Upcoming Events</h3></a></div>
+                                    <div><a href="alumni.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">OFAG Alumni</h3></a></div>
+                                    <div><a href="announcements.html#vacancies" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Vacancies</h3></a></div>
+                                    <div><a href="announcements.html#bids" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Bids</h3></a></div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="publications.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Publications
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div><a href="publications.html#news-stories" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">News and Stories</h3></a></div>
+                                    <div><a href="publications.html#press-statements" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Press Statements</h3></a></div>
+                                    <div><a href="newsletter.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Newsletters</h3></a></div>
+                                    <div><a href="strategic-documents.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Strategic Documents</h3></a></div>
+                                    <div><a href="publications.html#manuals-guidelines" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Manuals And Guidelines</h3></a></div>
+                                    <div><a href="publications.html#annual-reports" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Annual Performance and Financial Reports</h3></a></div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li><a href="audit-reports.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1">Audit Reports</a></li>
+                    <li class="relative group">
+                        <a href="portal.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Portal
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div><a href="portal.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Audit Recommendation Tracking System (ART) Portal</h3></a></div>
+                                    <div><a href="portal-help.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Helpdesk Management System</h3></a></div>
+                                    <div><a href="apk-portal.html" class="block hover:bg-gray-50 p-2 rounded transition-colors"><h3 class="text-mainblue font-semibold text-lg mb-2">Applications Portal</h3></a></div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="contact.html" class="text-mainblue text-base font-medium hover:border-b-2 hover:border-mainblue pb-1 flex items-center">
+                            Contact us
+                            <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="p-2">
+                                <div class="space-y-2">
+                                    <div>
+                                        <a href="contact.html#hq-address" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Headquarters Address</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="report-complaints.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Report Complaints</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="report-fraud.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Report Fraud</h3>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="report-queries.html" class="block hover:bg-gray-50 p-2 rounded transition-colors">
+                                            <h3 class="text-mainblue font-semibold text-lg mb-2">Report Queries</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-mainblue pt-12 relative">
+        <div class="absolute inset-0 w-full h-full" style="background-image: url('./assets/backgrounds/pattern.png'); background-size: cover; opacity: 0.08; pointer-events: none;"></div>
+        <div class="relative container mx-auto px-4 max-w-7xl">
+          <div class="bg-white p-8 md:p-12 border-l-8 border-mainblue mt-32">
+            <h1 class="text-mainblue text-3xl md:text-5xl font-bold mb-4">
+              Public Statements
+            </h1>
+            <p class="text-gray-600 text-lg">
+              Official public statements and declarations issued by the Office of the Federal Auditor General on important matters and developments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Statement -->
+      <section class="bg-white p-6 font-sans mt-20 lg:px-20 px-5">
+        <div class="mx-auto">
+          <h2 class="text-2xl font-bold text-[#1E3A8A] mb-6">
+            Latest Public Statement
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-4">
+              <img src="./assets/news/news1.png" alt="Main Statement" class="w-full h-auto rounded-md object-cover" />
+              <h3 class="text-xl font-bold text-mainblue">Statement on Enhanced Public Financial Management</h3>
+              <p class="text-lg text-mainblue leading-relaxed">
+                The Office of the Federal Auditor General issues this public statement to inform citizens about recent improvements in public financial management systems and enhanced transparency measures implemented across government institutions.
+              </p>
+              <div class="flex items-center space-x-4 text-sm text-gray-600">
+                <span>📅 June 20, 2024</span>
+                <span>👤 Office of the Federal Auditor General</span>
+              </div>
+              <button class="bg-mainblue text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-[#204ca8]">
+                Read Full Statement
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <h4 class="text-lg font-semibold text-mainblue mb-3">Recent Statements</h4>
+              <div class="space-y-3">
+                <div class="border-l-4 border-mainblue pl-3">
+                  <h5 class="font-medium text-mainblue">Audit Standards Update</h5>
+                  <p class="text-sm text-gray-600">June 18, 2024</p>
+                </div>
+                <div class="border-l-4 border-mainblue pl-3">
+                  <h5 class="font-medium text-mainblue">Citizen Engagement Initiative</h5>
+                  <p class="text-sm text-gray-600">June 15, 2024</p>
+                </div>
+                <div class="border-l-4 border-mainblue pl-3">
+                  <h5 class="font-medium text-mainblue">Financial Accountability Framework</h5>
+                  <p class="text-sm text-gray-600">June 12, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="bg-[#f6f8f9] py-12 px-6">
+        <div class="container mx-auto max-w-7xl">
+          <h2 class="text-3xl font-bold text-mainblue text-center mb-12">
+            Types of Public Statements
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div class="w-16 h-16 bg-mainblue rounded-full flex items-center justify-center mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-mainblue mb-3">Policy Statements</h3>
+              <p class="text-gray-600 mb-4">Official statements on audit policies, procedures, and regulatory frameworks</p>
+              <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                Explore
+              </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div class="w-16 h-16 bg-mainblue rounded-full flex items-center justify-center mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-mainblue mb-3">Transparency Reports</h3>
+              <p class="text-gray-600 mb-4">Public declarations on transparency initiatives and accountability measures</p>
+              <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                Explore
+              </button>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div class="w-16 h-16 bg-mainblue rounded-full flex items-center justify-center mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-mainblue mb-3">Citizen Information</h3>
+              <p class="text-gray-600 mb-4">Important announcements and information for the general public</p>
+              <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                Explore
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Statements Grid -->
+      <section class="py-16 px-6">
+        <div class="container mx-auto max-w-7xl">
+          <h2 class="text-3xl font-bold text-mainblue text-center mb-12">
+            Recent Public Statements
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img src="./assets/news/news2.png" alt="Statement 1" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-mainblue mb-3">Audit Standards Update</h3>
+                <p class="text-gray-600 mb-4">Updated audit standards and procedures have been implemented to enhance the quality and effectiveness of audit operations...</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">June 18, 2024</span>
+                  <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                    Read
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img src="./assets/news/news3.png" alt="Statement 2" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-mainblue mb-3">Citizen Engagement Initiative</h3>
+                <p class="text-gray-600 mb-4">New initiatives have been launched to increase citizen participation in audit processes and public financial oversight...</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">June 15, 2024</span>
+                  <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                    Read
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <img src="./assets/news/news4.png" alt="Statement 3" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-mainblue mb-3">Financial Accountability Framework</h3>
+                <p class="text-gray-600 mb-4">A comprehensive framework for financial accountability has been established to ensure proper oversight of public funds...</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">June 12, 2024</span>
+                  <button class="text-mainblue border border-mainblue px-4 py-2 rounded-lg hover:bg-mainblue hover:text-white transition-colors">
+                    Read
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <button class="bg-mainblue text-white px-8 py-3 rounded-lg hover:bg-[#204ca8] transition-colors">
+              View More Statements
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-[#f6f8f9] rounded-2xl mx-4 pb-10 md:mx-0 mt-10">
+        <div class="container mx-auto px-8 py-16 flex flex-col md:flex-row items-center justify-between max-w-7xl">
+          <div class="mb-8 md:mb-0">
+            <h2 class="text-mainblue text-3xl md:text-4xl font-thin mb-6">
+              Stay Informed with Public Statements!
+            </h2>
+            <p class="text-mainblue text-xl md:text-2xl font-thin max-w-xl">
+              Get the latest official statements and important announcements from the Office of the Federal Auditor General
+            </p>
+          </div>
+          <a href="news.html" class="bg-mainblue text-white text-xl px-12 py-6 rounded-md font-normal hover:bg-[#1e2d47] transition">
+            Media Center
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-mainblue pt-24 pb-10 mt-[-40px]">
+      <div class="container mx-auto px-4">
+        <div class="text-center text-white text-xs opacity-70">
+          &copy; 2024 Office of the Federal Auditor General. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <li><a href="services.html#online-services" class="block text-mainblue">የመስመር ላይ አገልግሎቶች</a></li>
                             <li><a href="services.html#service-guidelines" class="block text-mainblue">የአገልግሎት መመሪያዎች</a></li>
                             <li><a href="services.html#faqs" class="block text-mainblue">ተደጋጋሚ ጥያቄዎች</a></li>
-                            <li><a href="services.html#service-feedback" class="block text-mainblue">የአገልግሎት አስተያየት</a></li>
+                            <li><a href="feedback.html" class="block text-mainblue">የአገልግሎት አስተያየት</a></li>
                         </ul>
                     </li>
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <li><a href="publications.html#news-stories" class="block text-mainblue">ዜና እና ታሪኮች</a></li>
                             <li><a href="publications.html#press-statements" class="block text-mainblue">ጋዜጣዊ መግለጫዎች</a></li>
                             <li><a href="newsletter.html" class="block text-mainblue">ጋዜጣዎች</a></li>
-                            <li><a href="publications.html#strategic-documents" class="block text-mainblue">ስልታዊ ሰነዶች</a></li>
+                            <li><a href="strategic-documents.html" class="block text-mainblue">ስልታዊ ሰነዶች</a></li>
                             <li><a href="publications.html#manuals-guidelines" class="block text-mainblue">መመሪያዎች እና መመሪያዎች</a></li>
                             <li><a href="publications.html#annual-reports" class="block text-mainblue">ዓመታዊ ሪፖርቶች</a></li>
                         </ul>

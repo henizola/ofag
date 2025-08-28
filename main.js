@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <li><a href="services.html#online-services" class="block text-mainblue">Online Services</a></li>
                                 <li><a href="services.html#service-guidelines" class="block text-mainblue">Service Guidelines</a></li>
                                 <li><a href="services.html#faqs" class="block text-mainblue">FAQs</a></li>
-                                <li><a href="services.html#service-feedback" class="block text-mainblue">Service Feedback</a></li>
+                                <li><a href="feedback.html" class="block text-mainblue">Service Feedback</a></li>
                             </ul>
                         </li>
                         <li>
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <li><a href="publications.html#news-stories" class="block text-mainblue">News and Stories</a></li>
                                 <li><a href="publications.html#press-statements" class="block text-mainblue">Press Statements</a></li>
                                 <li><a href="newsletter.html" class="block text-mainblue">Newsletters</a></li>
-                                <li><a href="publications.html#strategic-documents" class="block text-mainblue">Strategic Documents</a></li>
+                                <li><a href="strategic-documents.html" class="block text-mainblue">Strategic Documents</a></li>
                                 <li><a href="publications.html#manuals-guidelines" class="block text-mainblue">Manuals & Guidelines</a></li>
                                 <li><a href="publications.html#annual-reports" class="block text-mainblue">Annual Reports</a></li>
                             </ul>
