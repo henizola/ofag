@@ -308,18 +308,61 @@
                         <!-- Search -->
                         <div class="bg-white p-4 rounded-lg shadow-md">
                             <div class="relative">
-                                <input type="text" placeholder="Search" class="w-full p-2 pr-10 rounded border border-gray-300">
+                                <input type="text" id="sidebar-search" placeholder="Search reports..." class="w-full p-2 pr-10 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mainblue">
                                 <i class="fas fa-search absolute top-1/2 right-3 -translate-y-1/2 text-gray-400"></i>
                             </div>
                         </div>
                         <!-- Date Range -->
                         <div class="bg-white p-4 rounded-lg shadow-md">
-                             <input type="text" placeholder="Jan 6, 2024 - Jan 13, 2024" class="w-full p-2 rounded border border-gray-300">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Year Range</label>
+                            <div class="flex space-x-2">
+                                <select id="start-year-filter" class="flex-1 p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mainblue">
+                                    <option value="">From Year</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                </select>
+                                <select id="end-year-filter" class="flex-1 p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mainblue">
+                                    <option value="">To Year</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                </select>
+                            </div>
                         </div>
                         <!-- Sort By -->
                         <div class="bg-white p-4 rounded-lg shadow-md">
-                            <select class="w-full p-2 rounded border border-gray-300">
-                                <option>Sort by</option>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+                            <select id="sort-select" class="w-full p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-mainblue">
+                                <option value="">Default Order</option>
+                                <option value="year-asc">Year (Oldest First)</option>
+                                <option value="year-desc">Year (Newest First)</option>
+                                <option value="name-asc">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
                             </select>
                         </div>
                         <!-- Categories -->
@@ -329,9 +372,7 @@
                                 <li class="hover:text-mainblue cursor-pointer">Financial Audit Reports</li>
                                 <li class="hover:text-mainblue cursor-pointer">Compliance Audit Reports</li>
                                 <li class="hover:text-mainblue cursor-pointer">Performance Audit Reports</li>
-                                <li class="hover:text-mainblue cursor-pointer">Environmental Audit Reports</li>
                                 <li class="hover:text-mainblue cursor-pointer">IT Audit Reports</li>
-                                <li class="hover:text-mainblue cursor-pointer">Investigation Audit Reports</li>
                                 <li class="hover:text-mainblue cursor-pointer">Speech to Parliament</li>
                             </ul>
                         </div>
@@ -407,49 +448,159 @@
     <script src="./main.js"></script>
     <script>
         const fileSystem = {
-            '2004 E.C Annual Year Reports': {
+            '2002E.C Annual Year Audit Report (2002/2003 Audit Year)': {
+                year: '2002/2003 Audit Year',
+                children: {
+                    'Audit Report': { year: '2002/2003 Audit Year', type: 'folder', children: { 'Audit Report.pdf': { year: '2002/2003 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2002/2003 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2002/2003 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2002/2003 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2002/2003 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2002/2003 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2002/2003 Audit Year', type: 'file' } } }
+                }
+            },
+            '2003E.C Annual Year Audit Report (2003/2004 Audit Year)': {
+                year: '2003/2004 Audit Year',
+                children: {
+                    'IT Audit': { year: '2003/2004 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2003/2004 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2003/2004 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2003/2004 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2003/2004 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2003/2004 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2003/2004 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2003/2004 Audit Year', type: 'file' } } }
+                }
+            },
+            '2004E.C Annual Year Audit Report (2004/2005 Audit Year)': {
                 year: '2004/2005 Audit Year',
                 children: {
-                    'Financial Audits': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Financial Statement Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
-                    'Performance Audits': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                    'IT Audit': { year: '2004/2005 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2004/2005 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2004/2005 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2004/2005 Audit Year', type: 'file' } } }
                 }
             },
-            '2005 E.C Annual Year Reports': { year: '2005/2006 Audit Year', children: { 'Summary Report.pdf': { year: '2005/2006 Audit Year', type: 'file' } } },
-            '2006 E.C Annual Year Reports': { year: '2006/2007 Audit Year', children: { 'Annual Report.pdf': { year: '2006/2007 Audit Year', type: 'file' } } },
-            '2007 E.C Annual Year Reports': { year: '2007/2008 Audit Year', children: { 'Full Report.pdf': { year: '2007/2008 Audit Year', type: 'file' } } },
-            '2008 E.C Annual Year Reports': { year: '2008/2009 Audit Year', children: { 'Audit Highlights.pdf': { year: '2008/2009 Audit Year', type: 'file' } } },
-            '2009 E.C Annual Year Reports': { year: '2009/2010 Audit Year', children: { 'Complete Audit.pdf': { year: '2009/2010 Audit Year', type: 'file' } } },
-            '2010 E.C Annual Year Reports': {
+            '2005E.C Annual Year Audit Report (2005/2006 Audit Year)': {
+                year: '2005/2006 Audit Year',
+                children: {
+                    'IT Audit': { year: '2005/2006 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2005/2006 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2005/2006 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2005/2006 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2005/2006 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2005/2006 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2005/2006 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2005/2006 Audit Year', type: 'file' } } }
+                }
+            },
+            '2006E.C Annual Year Audit Report (2006/2007 Audit Year)': {
+                year: '2006/2007 Audit Year',
+                children: {
+                    'IT Audit': { year: '2006/2007 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2006/2007 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2006/2007 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2006/2007 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2006/2007 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2006/2007 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2006/2007 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2006/2007 Audit Year', type: 'file' } } }
+                }
+            },
+            '2007E.C Annual Year Audit Report (2007/2008 Audit Year)': {
+                year: '2007/2008 Audit Year',
+                children: {
+                    'IT Audit': { year: '2007/2008 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2007/2008 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2007/2008 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2007/2008 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2007/2008 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2007/2008 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2007/2008 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2007/2008 Audit Year', type: 'file' } } }
+                }
+            },
+            '2008E.C Annual Year Audit Report (2008/2009 Audit Year)': {
+                year: '2008/2009 Audit Year',
+                children: {
+                    'IT Audit': { year: '2008/2009 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2008/2009 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2008/2009 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2008/2009 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2008/2009 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2008/2009 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2008/2009 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2008/2009 Audit Year', type: 'file' } } }
+                }
+            },
+            '2009 E.C Annual Year Audit Report (2009/2010 Audit Year)': {
+                year: '2009/2010 Audit Year',
+                children: {
+                    'IT Audit': { year: '2009/2010 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2009/2010 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2009/2010 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2009/2010 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2009/2010 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2009/2010 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2009/2010 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2009/2010 Audit Year', type: 'file' } } }
+                }
+            },
+            '2010 E.C Annual Year Audit Report (2010/2011 Audit Year)': {
                 year: '2010/2011 Audit Year',
                 children: {
-                    'IT Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'IT Systems Security Audit.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
-                    'Performance Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Value for Money Audit.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
-                    'Regularity Audit': {
-                        year: '2010/2011 Audit Year',
-                        type: 'folder',
-                        children: {
-                            'All Abari': { year: '2010/2011 Audit Year', type: 'file' },
-                            'Liyu Liyu': { year: '2010/2011 Audit Year', type: 'file' },
-                            'Zegeba': { year: '2010/2011 Audit Year', type: 'file' }
-                        }
-                    },
-                    'Speech to Parliament': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Parliamentary Address.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
-                    'Annexes': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Supporting Documents.pdf': { year: '2010/2011 Audit Year', type: 'file' } } }
+                    'IT Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2010/2011 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2010/2011 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2010/2011 Audit Year', type: 'file' } } }
                 }
             },
-            '2011 E.C Annual Year Reports': { year: '2011/2012 Audit Year', children: { '2011 Report.pdf': { year: '2011/2012 Audit Year', type: 'file' } } },
-            '2012 E.C Annual Year Reports': { year: '2012/2013 Audit Year', children: { '2012 Report.pdf': { year: '2012/2013 Audit Year', type: 'file' } } },
-            '2013 E.C Annual Year Reports': { year: '2013/2014 Audit Year', children: { '2013 Report.pdf': { year: '2013/2014 Audit Year', type: 'file' } } },
+            '2011 E.C Annual Year Audit Reports (2011/2012 Audit Year)': {
+                year: '2011/2012 Audit Year',
+                children: {
+                    'IT Audit': { year: '2011/2012 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2011/2012 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2011/2012 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2011/2012 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2011/2012 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2011/2012 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2011/2012 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2011/2012 Audit Year', type: 'file' } } }
+                }
+            },
+            '2012 E.C Annual Year Audit Reports (2012/2013 Audit Year)': {
+                year: '2012/2013 Audit Year',
+                children: {
+                    'IT Audit': { year: '2012/2013 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2012/2013 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2012/2013 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2012/2013 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2012/2013 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2012/2013 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2012/2013 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2012/2013 Audit Year', type: 'file' } } }
+                }
+            },
+            '2013 E.C Annual Year Audit Reports (2013/2014 Audit Year)': {
+                year: '2013/2014 Audit Year',
+                children: {
+                    'IT Audit': { year: '2013/2014 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2013/2014 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2013/2014 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2013/2014 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2013/2014 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2013/2014 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2013/2014 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2013/2014 Audit Year', type: 'file' } } }
+                }
+            },
+            '2014 E.C Annual Year Audit Reports (2014/2015 Audit Year)': {
+                year: '2014/2015 Audit Year',
+                children: {
+                    'IT Audit': { year: '2014/2015 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2014/2015 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2014/2015 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2014/2015 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2014/2015 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2014/2015 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2014/2015 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2014/2015 Audit Year', type: 'file' } } }
+                }
+            },
+            '2015 E.C Annual Year Audit Reports (2015/2016 Audit Year)': {
+                year: '2015/2016 Audit Year',
+                children: {
+                    'IT Audit': { year: '2015/2016 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2015/2016 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2015/2016 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2015/2016 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2015/2016 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2015/2016 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2015/2016 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2015/2016 Audit Year', type: 'file' } } }
+                }
+            },
+            '2016 E.C Annual Year Audit Reports (2016/2017 Audit Year)': {
+                year: '2016/2017 Audit Year',
+                children: {
+                    'IT Audit': { year: '2016/2017 Audit Year', type: 'folder', children: { 'IT Audit Report.pdf': { year: '2016/2017 Audit Year', type: 'file' } } },
+                    'Performance Audit': { year: '2016/2017 Audit Year', type: 'folder', children: { 'Performance Audit Report.pdf': { year: '2016/2017 Audit Year', type: 'file' } } },
+                    'Regularity Audit': { year: '2016/2017 Audit Year', type: 'folder', children: { 'Regularity Audit Report.pdf': { year: '2016/2017 Audit Year', type: 'file' } } },
+                    'Speech To Parliament': { year: '2016/2017 Audit Year', type: 'folder', children: { 'Speech To Parliament.pdf': { year: '2016/2017 Audit Year', type: 'file' } } }
+                }
+            }
         };
 
         let viewMode = 'years'; // 'years' or 'tree'
         let selectedYear = null;
         let currentPage = 1;
         const itemsPerPage = 8;
+        let searchQuery = '';
+        let startYearFilter = '';
+        let endYearFilter = '';
+        let sortOption = '';
 
         const fileListEl = document.getElementById('file-list');
         const breadcrumbsEl = document.getElementById('breadcrumbs');
         const paginationEl = document.getElementById('pagination-controls');
+        const sidebarSearchEl = document.getElementById('sidebar-search');
+        const startYearFilterEl = document.getElementById('start-year-filter');
+        const endYearFilterEl = document.getElementById('end-year-filter');
+        const sortSelectEl = document.getElementById('sort-select');
 
         function render() {
             if (viewMode === 'years') {
@@ -463,7 +614,37 @@
             breadcrumbsEl.innerHTML = `<span>Annual Audit Reports</span>`;
             fileListEl.innerHTML = '';
             
-            const years = Object.keys(fileSystem);
+            let years = Object.keys(fileSystem);
+            
+            // Apply search filter
+            if (searchQuery) {
+                years = years.filter(yearName => 
+                    yearName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    fileSystem[yearName].year.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            }
+            
+            // Apply year range filter
+            if (startYearFilter || endYearFilter) {
+                years = years.filter(yearName => {
+                    // Extract the year number from the title (e.g., "2002E.C Annual Year Audit Report" -> 2002)
+                    const yearMatch = yearName.match(/(\d{4})E\.C/);
+                    if (!yearMatch) return false;
+                    
+                    const yearNum = parseInt(yearMatch[1]);
+                    
+                    let startYear = startYearFilter ? parseInt(startYearFilter) : 2002;
+                    let endYear = endYearFilter ? parseInt(endYearFilter) : 2016;
+                    
+                    return yearNum >= startYear && yearNum <= endYear;
+                });
+            }
+            
+            // Apply sorting
+            if (sortOption) {
+                years = sortYears(years, sortOption);
+            }
+            
             const totalPages = Math.ceil(years.length / itemsPerPage);
             const start = (currentPage - 1) * itemsPerPage;
             const end = start + itemsPerPage;
@@ -494,7 +675,15 @@
         function renderTreeView() {
             const yearData = fileSystem[selectedYear];
             breadcrumbsEl.innerHTML = `<span class="cursor-pointer hover:underline" onclick="showYearListView()">Annual Audit Reports</span> &gt; <span>${selectedYear}</span>`;
-            fileListEl.innerHTML = createTreeHtml(yearData.children, 0);
+            
+            let children = yearData.children;
+            
+            // Apply search filter to tree view
+            if (searchQuery) {
+                children = filterTreeChildren(children, searchQuery);
+            }
+            
+            fileListEl.innerHTML = createTreeHtml(children, 0);
 
             // Add event listeners for the newly rendered folder toggles
             document.querySelectorAll('.folder-toggle').forEach(el => {
@@ -585,6 +774,91 @@
                 render();
             }
         }
+        
+        // Helper function to filter tree children based on search query
+        function filterTreeChildren(children, query) {
+            const filtered = {};
+            const queryLower = query.toLowerCase();
+            
+            for (const name in children) {
+                const item = children[name];
+                
+                // Check if the current item matches the search
+                if (name.toLowerCase().includes(queryLower) || 
+                    (item.year && item.year.toLowerCase().includes(queryLower))) {
+                    filtered[name] = item;
+                } else if (item.children) {
+                    // Recursively filter children
+                    const filteredChildren = filterTreeChildren(item.children, query);
+                    if (Object.keys(filteredChildren).length > 0) {
+                        filtered[name] = { ...item, children: filteredChildren };
+                    }
+                }
+            }
+            
+            return filtered;
+        }
+        
+        // Helper function to sort years based on sort option
+        function sortYears(years, sortOption) {
+            return years.sort((a, b) => {
+                // Helper function to extract year from title
+                const extractYear = (title) => {
+                    const match = title.match(/(\d{4})E\.C/);
+                    return match ? parseInt(match[1]) : 0;
+                };
+                
+                switch (sortOption) {
+                    case 'year-asc':
+                        // Sort by year ascending (oldest first)
+                        const yearA = extractYear(a);
+                        const yearB = extractYear(b);
+                        return yearA - yearB;
+                    
+                    case 'year-desc':
+                        // Sort by year descending (newest first)
+                        const yearC = extractYear(a);
+                        const yearD = extractYear(b);
+                        return yearD - yearC;
+                    
+                    case 'name-asc':
+                        // Sort by name ascending (A-Z)
+                        return a.localeCompare(b);
+                    
+                    case 'name-desc':
+                        // Sort by name descending (Z-A)
+                        return b.localeCompare(a);
+                    
+                    default:
+                        return 0;
+                }
+            });
+        }
+        
+        // Event listeners for search and filter
+        sidebarSearchEl.addEventListener('input', function(e) {
+            searchQuery = e.target.value;
+            currentPage = 1; // Reset to first page when searching
+            render();
+        });
+        
+        startYearFilterEl.addEventListener('change', function(e) {
+            startYearFilter = e.target.value;
+            currentPage = 1; // Reset to first page when filtering
+            render();
+        });
+        
+        endYearFilterEl.addEventListener('change', function(e) {
+            endYearFilter = e.target.value;
+            currentPage = 1; // Reset to first page when filtering
+            render();
+        });
+        
+        sortSelectEl.addEventListener('change', function(e) {
+            sortOption = e.target.value;
+            currentPage = 1; // Reset to first page when sorting
+            render();
+        });
         
         render();
     </script>
